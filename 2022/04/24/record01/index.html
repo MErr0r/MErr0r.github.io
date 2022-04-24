@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="分享第一周学习内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="First learning record">
+<meta property="og:url" content="http://example.com/2022/04/24/record01/index.html">
+<meta property="og:site_name" content="MErr0rのBlog">
+<meta property="og:description" content="分享第一周学习内容">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/example01.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/example02.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/node_structure.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/createList01.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/createList02.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/createList03.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/createList04.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/createList05.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/createList06.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/createList07.jpg">
+<meta property="og:image" content="http://example.com/2022/04/24/record01/createList08.jpg">
+<meta property="article:published_time" content="2022-04-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-24T05:19:30.989Z">
+<meta property="article:author" content="MErr0r">
+<meta property="article:tag" content="每周学习">
+<meta property="article:tag" content="leetcode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/04/24/record01/example01.jpg">
+
+
+<link rel="canonical" href="http://example.com/2022/04/24/record01/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/04/24/record01/","path":"2022/04/24/record01/","title":"First learning record"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>First learning record | MErr0rのBlog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MErr0rのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">I turn the page to drown you out</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#leetcode-%E7%83%AD%E9%A2%98HOT-100"><span class="nav-number">1.</span> <span class="nav-text">leetcode 热题HOT 100</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0"><span class="nav-number">1.1.</span> <span class="nav-text">1.两数相加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0"><span class="nav-number">1.2.</span> <span class="nav-text">2.两数相加</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion"><span class="nav-number">2.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="MErr0r"
+      src="/images/xhw.jpg">
+  <p class="site-author-name" itemprop="name">MErr0r</p>
+  <div class="site-description" itemprop="description">合工大研究僧</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/24/record01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xhw.jpg">
+      <meta itemprop="name" content="MErr0r">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MErr0rのBlog">
+      <meta itemprop="description" content="合工大研究僧">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="First learning record | MErr0rのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          First learning record
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-24 00:00:00 / 修改时间：13:19:30" itemprop="dateCreated datePublished" datetime="2022-04-24T00:00:00+08:00">2022-04-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>分享第一周学习内容</p>
+<span id="more"></span>
+<h1 id="leetcode-热题HOT-100"><a href="#leetcode-热题HOT-100" class="headerlink" title="leetcode 热题HOT 100"></a>leetcode 热题HOT 100</h1><h2 id="1-两数相加"><a href="#1-两数相加" class="headerlink" title="1.两数相加"></a>1.两数相加</h2><p>给定一个整数数组nums和一个整数目标值target请你在该数组中找出和为目标值target的那 两个整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。你可以按任意顺序返回答案。</p>
+<img src="/2022/04/24/record01/example01.jpg" class="" title="这是一张图片">
+
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; a; </span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">b</span><span class="params">(<span class="number">2</span>,<span class="number">-1</span>)</span></span>; </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++)</span><br><span class="line">            a.<span class="built_in">insert</span>(map&lt;<span class="type">int</span>,<span class="type">int</span>&gt;::<span class="built_in">value_type</span>(nums[i],i));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a.<span class="built_in">count</span>(target - nums[i]) != <span class="number">0</span> &amp;&amp; (a[target - nums[i]] != i))&#123;</span><br><span class="line">                b[<span class="number">0</span>] = i;</span><br><span class="line">                b[<span class="number">1</span>] = a[target - nums[i]];</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>通常的作法为逐步尝试，首先第一个加第二个，再第一个加第三个……思路虽然简单暴力但运行速度慢且内存空间消耗大<br>此代码采用的</p>
+<ul>
+<li><p>开始逐行分析与知识点回顾</p>
+  <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; a; <span class="regexp">//</span>创建名为a的<span class="keyword">map</span>容器，key与val的类型均为<span class="keyword">int</span></span><br></pre></td></tr></table></figure>
+
+<p>  回顾map容器的相关知识：<br>  1.map容器里的数值都是pair—&gt;成对出现 分别为键值key与实值val<br>  2.我们可以通过key的索引查到对应的val<br>  3.map不允许有重复的键值key存在<br>  3.所有元素都会根据你所存的键值key进行自动排序<br>  4.其中&lt;int,int&gt;  左边int代表key的类型为int  右边的int代表val为int</p>
+<p>  作用为：存储nums里的元素</p>
+  <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">vector</span>&lt;int&gt; b(<span class="number">2</span>,-<span class="number">1</span>);//创建名为b的vector容器，<span class="number">2</span>代表初始长度，里面的值均为-<span class="number">1</span>，存储nums里能满足target的两个值</span><br></pre></td></tr></table></figure>
+
+<p>  回顾vector容器的相关知识：<br>  1.与数组结构非常相似，与数组不同点在于数组是静态，而vector是动态扩展</p>
+  <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i &lt; nums.size<span class="literal">()</span>;i++)</span><br><span class="line">    a.insert(map&lt;<span class="built_in">int</span>,<span class="built_in">int</span>&gt;::value<span class="constructor">_type(<span class="params">nums</span>[<span class="params">i</span>],<span class="params">i</span>)</span>);</span><br></pre></td></tr></table></figure>
+<p>  涉及到的知识：<br>  1.nums.size()表示的是整数数组nums的长度<br>  2.a.insert是调用map容器里的函数insert：在map中插入元素<br>  3.map&lt;int,int&gt;::value_type：令元素的类型为map中含有key与val的pair类型<br>  4.map&lt;int,int&gt;::mapped_type：令元素的类型为map中的val类型<br>  5.map&lt;int,int&gt;::key_type：令元素的类型为map中的key类型<br>  所以 我们把nums里的元素分别以key-val的pair形式传到名为a的map容器里</p>
+  <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 0;i &lt; nums.size();i++)&#123;</span><br><span class="line">        if(a.count(target - nums<span class="comment">[i]</span>) != 0 &amp;&amp; (a<span class="comment">[target - nums<span class="comment">[i]</span>]</span> != i))&#123;</span><br><span class="line">            b<span class="comment">[0]</span> = i;</span><br><span class="line">            b<span class="comment">[1]</span> = a<span class="comment">[target - nums<span class="comment">[i]</span>]</span>;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return b;</span><br></pre></td></tr></table></figure>
+<p>  涉及到的知识：<br>  1.map容器的函数count(key)：如果key键值存在，则返回1，否则返回0<br>  思路：通过target依次减去nums[i]，得到的结果通过count函数搜索是否存在于名为a的map容器中。且通过&amp;&amp;算法来满足“同一个元素在答案里不能重复出现”这一条件。if条件满足后，则赋予名为b的vector容器，最后返回b容器</p>
+</li>
+</ul>
+<h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2.两数相加"></a>2.两数相加</h2><p>给你两个非空的链表，表示两个非负的整数。它们每位数字都是按照逆序的方式存储的，并且每个节点只能存储一位数字。请你将两个数相加，并以相同形式返回一个表示和的链表。<br>你可以假设除了数字0之外，这两个数都不会以0开头。</p>
+<img src="/2022/04/24/record01/example02.jpg" class="" title="这是一张图片">
+
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * <span class="type">Definition</span> <span class="keyword">for</span> singly-linked <span class="built_in">list</span>.</span><br><span class="line"> * <span class="keyword">struct</span> <span class="type">ListNode</span> &#123;</span><br><span class="line"> *     <span class="built_in">int</span> <span class="keyword">val</span>;</span><br><span class="line"> *     <span class="type">ListNode</span> *next;</span><br><span class="line"> *     <span class="type">ListNode</span><span class="literal">()</span> : <span class="keyword">val</span>(<span class="number">0</span>), next(nullptr) &#123;&#125;</span><br><span class="line"> *     <span class="type">ListNode</span>(<span class="built_in">int</span> x) : <span class="keyword">val</span>(x), next(nullptr) &#123;&#125;</span><br><span class="line"> *     <span class="type">ListNode</span>(<span class="built_in">int</span> x, <span class="type">ListNode</span> *next) : <span class="keyword">val</span>(x), next(next) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">class</span> <span class="type">Solution</span> &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="type">ListNode</span>* addTwoNumbers(<span class="type">ListNode</span>* l1, <span class="type">ListNode</span>* l2) &#123;</span><br><span class="line">        <span class="type">ListNode</span>* <span class="type">H</span> = <span class="keyword">new</span> <span class="type">ListNode</span><span class="literal">()</span>;</span><br><span class="line">        <span class="type">ListNode</span>* ptr = <span class="type">H</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(l1 || l2 || carry)&#123;</span><br><span class="line">            <span class="built_in">int</span> <span class="keyword">val</span> = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(l1) <span class="keyword">val</span> += l1-&gt;<span class="keyword">val</span>,l1 = l1-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(l2) <span class="keyword">val</span> += l2-&gt;<span class="keyword">val</span>,l2 = l2-&gt;next;</span><br><span class="line">            <span class="keyword">val</span> +=carry;</span><br><span class="line"></span><br><span class="line">            <span class="type">ListNode</span>* node = <span class="keyword">new</span> <span class="type">ListNode</span>(<span class="keyword">val</span> % <span class="number">10</span>);</span><br><span class="line">            ptr-&gt;next = node;</span><br><span class="line">            ptr = node;</span><br><span class="line">            carry = <span class="keyword">val</span> / <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        return <span class="type">H</span>-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>开始逐行分析与知识点回顾<br>  创建链表的详细过程<br>  1.链表的概念<br>  通过一组任意的存储单元来存储线性表中的数据元素，有一个个结点组成。<br>  2.节点(Node)的框架  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct ListNode&#123;</span><br><span class="line">    int data<span class="comment">;</span></span><br><span class="line">    ListNode* next<span class="comment">;</span></span><br><span class="line">&#125;<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+  节点分为头节点和首元节点<br>  a.头节点<br>  设置链表前会额外增设一个节点，该节点一般不存放数据。好处是可以使问题简单化。对于链表来讲，不一定非得增设头节点。<br>  b.首元节点<br>  头节点后边的第一个节点，也是链表中的第一个节点。<br>  节点包括数据data和指针Next<br>  a.指针的概念<br>  指针是一个变量，存储另一个变量的地址<br>  <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">int</span>* p;<span class="comment">//定义指针的格式为 数据类型* 指针变量名字</span></span><br><span class="line">p = &amp;a;<span class="comment">//&amp;代表取址符号</span></span><br></pre></td></tr></table></figure><br>  b.结构体指针<br>  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">student</span>&#123;</span><br><span class="line">    string name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;<span class="comment">//创建一个结构体</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="number">1.</span>创建结构体变量</span><br><span class="line">    student s =&#123;<span class="string">&quot;haha&quot;</span>,<span class="number">18</span>&#125;;</span><br><span class="line">    <span class="number">2.</span>通过指针指向结构体变量</span><br><span class="line">    student* p = &amp;s;<span class="comment">//p的类型必须跟s一致</span></span><br><span class="line">    <span class="number">3.</span>指针访问结构体变量中的数据</span><br><span class="line">    cout &lt;&lt; p-&gt;name;<span class="comment">//通过-&gt;访问结构体里的数据</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>  结点的框架图：<img src="/2022/04/24/record01/node_structure.jpg" class="" title="这是一张图片">
+  创建链表的流程：  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="comment">/*创建一个链表*/</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">ListNode</span>&#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    ListNode* next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">createList</span><span class="params">(ListNode* pHead)</span></span>&#123;</span><br><span class="line">    ListNode* p = pHead;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">10</span>;i++)&#123;</span><br><span class="line">        ListNode* pNewNode = <span class="keyword">new</span> ListNode;</span><br><span class="line">        pNewNode-&gt;data = i;</span><br><span class="line">        pNewNode-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        p-&gt;next = pNewNode;</span><br><span class="line">        p = pNewNode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ListNode* head = <span class="literal">NULL</span>;</span><br><span class="line">    head-&gt;data = <span class="number">0</span>;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="built_in">createList</span>(head);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  现来逐个分析   <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int main()&#123;</span><br><span class="line">    ListNode* head <span class="operator">=</span> NULL<span class="comment">;</span></span><br><span class="line">    head-&gt;data <span class="operator">=</span> <span class="number">0</span><span class="comment">;</span></span><br><span class="line">    head-&gt;next <span class="operator">=</span> NULL<span class="comment">;</span></span><br><span class="line">    createList(head)<span class="comment">;</span></span><br><span class="line">    return <span class="number">0</span><span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  首先在main函数创建一个名为head的指针结构体变量，在这我们可以把head看成头节点，分配相应内存和初始化成员后如下图所示  <img src="/2022/04/24/record01/createList01.jpg" class="" title="这是一张图片">
+  把head指针代入函数createList，开始创建链表  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">createList</span>(<span class="params">ListNode* pHead</span>)&#123;</span><br><span class="line">    <span class="title class_">ListNode</span>* p = pHead;</span><br></pre></td></tr></table></figure>
+  <img src="/2022/04/24/record01/createList02.jpg" class="" title="这是一张图片">
+  创造p节点，令结构体指针p等于pHead，此时p的地址与pHead的地址一样，对p操作就是对pHead操作，所以p也是头节点。  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    for(int i <span class="operator">=</span> <span class="number">0</span><span class="comment">;i &lt; 10;i++)&#123;</span></span><br><span class="line">        //i <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">        ListNode* pNewNode <span class="operator">=</span> new ListNode<span class="comment">;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  进入for循环，处于i&#x3D;0时。在堆区new一个新内存，存放pNewNode。作为中间结构体为存放新节点提供过渡。<br>  a.new的相关知识<br>  new返回的使 该数据类型的指针<br>  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="function"><span class="keyword">func</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span>* p = <span class="built_in">new</span> <span class="type">int</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>  b.内存四区<br>  程序运行前：<br>  代码区：存放函数体的二进制代码，由操作系统进行管理<br>  全局区：存放全局变量和静态变量以及常量<br>  程序运行后：<br>  堆区：堆区的数据由程序员开辟，程序员管理使用(delete)<br>  栈区：栈区的数据由系统分配，一般存放函数的参数以及局部变量。函数执行完，栈区的数据都会自动释放。<br>  指针本质是局部变量，放在栈上，但指针保存的数据使放在堆区。<br>  回到链表创建上来  <figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//i = 0</span></span><br><span class="line"><span class="function"><span class="title">pNewNode</span>-&gt;</span><span class="keyword">data</span> = i;</span><br><span class="line"><span class="function"><span class="title">pNewNode</span>-&gt;</span>next = NULL;</span><br></pre></td></tr></table></figure>
+  <img src="/2022/04/24/record01/createList03.jpg" class="" title="这是一张图片">
+  当i&#x3D;0时，在pNewNode里存放数据  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//i <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">p-&gt;next <span class="operator">=</span> pNewNode<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+  <img src="/2022/04/24/record01/createList04.jpg" class="" title="这是一张图片">
+  头节点p指向我们的创建的链表的第一个节点 i&#x3D;0下的pNewNode，i&#x3D;0下的pNewNode也称之为首元节点。  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//i <span class="operator">=</span> <span class="number">0</span></span><br><span class="line"><span class="attribute">p</span> <span class="operator">=</span> pNewNode<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+  <img src="/2022/04/24/record01/createList05.jpg" class="" title="这是一张图片">
+  将i&#x3D;1下的pNewNode的地址赋予给p，所以p与pHead没有联系，现在是指针p和i&#x3D;1下的指针pNewNode指向同一块内存。<br>  我们进入下一个循环  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//i <span class="operator">=</span> <span class="number">1</span></span><br><span class="line">ListNode* pNewNode <span class="operator">=</span> new ListNode<span class="comment">;</span></span><br><span class="line">pNewNode-&gt;data <span class="operator">=</span> i<span class="comment">;</span></span><br><span class="line">pNewNode-&gt;next <span class="operator">=</span> NULL<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+  <img src="/2022/04/24/record01/createList06.jpg" class="" title="这是一张图片">
+  当i&#x3D;1时，在pNewNode里存放数据  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//i <span class="operator">=</span> <span class="number">1</span></span><br><span class="line">p-&gt;next <span class="operator">=</span> pNewNode<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+  <img src="/2022/04/24/record01/createList07.jpg" class="" title="这是一张图片">
+  节点p指向我们的创建的链表的第一个节点 i&#x3D;1下的pNewNode  <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//i <span class="operator">=</span> <span class="number">1</span></span><br><span class="line"><span class="attribute">p</span> <span class="operator">=</span> pNewNode<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+  <img src="/2022/04/24/record01/createList08.jpg" class="" title="这是一张图片">
+  将i&#x3D;1下的pNewNode的地址赋予给p，所以p与i&#x3D;0下的pNewNode没有联系，现在是指针p和i&#x3D;1下的指针pNewNode指向同一块内存。<br>  我们的创建链表的详细过程就结束了，回到LeetCode题上。</li>
+</ul>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ListNode* H <span class="operator">=</span> new ListNode()<span class="comment">;</span></span><br><span class="line">ListNode* ptr <span class="operator">=</span> H<span class="comment">;</span></span><br><span class="line">int carry <span class="operator">=</span> <span class="number">0</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>H为定义的头节点，ptr是中间节点，H存放的地址与ptr存放的地址一致。carry为进位数</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">while</span><span class="params">(l1 || l2 || carry)</span></span>&#123;</span><br></pre></td></tr></table></figure>
+<p>个人的看法只要当l1 l2的val为0(结构体里的data)及carry为0，才返回false，其他情况一律为true。</p>
+<figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(l1) <span class="keyword">val</span> += l1-&gt;<span class="keyword">val</span>,l1 = l1-&gt;next;</span><br><span class="line"><span class="keyword">if</span>(l2) <span class="keyword">val</span> += l2-&gt;<span class="keyword">val</span>,l2 = l2-&gt;next;</span><br><span class="line"><span class="keyword">val</span> +=carry;</span><br></pre></td></tr></table></figure>
+<p>当l1不为0是 执行if语句 val为l1链表的第一个数字，l1从第一个链表转换成l1的第二个链表<br>第二行代码同理<br>carry是进位制</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ListNode* <span class="keyword">node</span> <span class="title">= new</span> ListNode(val % <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<p>创建新链表的第一个节点，存储的数据为 val除以10的余数</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ptr-&gt;next <span class="operator">=</span> node<span class="comment">;</span></span><br><span class="line"><span class="attribute">ptr</span> <span class="operator">=</span> node<span class="comment">;</span></span><br><span class="line"><span class="attribute">carry</span> <span class="operator">=</span> val / <span class="number">10</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>因为node存放的数据是我们想要的数据，所以利用ptr的next指针即H的next指针指向node节点，ptr切断与H的联系，令ptr与node指向同一块内存，手法跟创建链表一样。通过相除判断carry是否进1位。</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> H-&gt;<span class="keyword">next</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>H为头节点，头节点下一个next才是链表中的节点。</p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>第一次写博客，刚开始上手不是很熟悉，所以暂时就写了这周学的LeetCode。下次尝试把参与的项目学到的知识分享在博客中。暂定每周日更新博客，如果有研究僧考试那就咕咕咕~See you next week</p>
+
+    </div>
+
+    
+    
+    
+    
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+       
+    </div>
+
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%8F%E5%91%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 每周学习</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/21/test4-21/" rel="prev" title="test4.21">
+                  <i class="fa fa-chevron-left"></i> test4.21
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MErr0r</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"\u003cyour disqus shotname>","count":false,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

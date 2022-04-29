@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bg01.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bg01.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="分享四月第一周学习内容 leetcode 热题HOT 100">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Second learning record in April">
+<meta property="og:url" content="http://example.com/2022/05/02/record02/index.html">
+<meta property="og:site_name" content="MErr0rのBlog">
+<meta property="og:description" content="分享四月第一周学习内容 leetcode 热题HOT 100">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/05/02/record02/example01.jpg">
+<meta property="og:image" content="http://example.com/2022/05/02/record02/example02.jpg">
+<meta property="og:image" content="http://example.com/2022/05/02/record02/example03.jpg">
+<meta property="og:image" content="http://example.com/2022/05/02/record02/example04.jpg">
+<meta property="og:image" content="http://example.com/2022/05/02/record02/example05.jpg">
+<meta property="og:image" content="http://example.com/2022/05/02/record02/example06.jpg">
+<meta property="article:published_time" content="2022-05-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-29T01:02:44.786Z">
+<meta property="article:author" content="MErr0r">
+<meta property="article:tag" content="每周学习">
+<meta property="article:tag" content="leetcode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/05/02/record02/example01.jpg">
+
+
+<link rel="canonical" href="http://example.com/2022/05/02/record02/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/05/02/record02/","path":"2022/05/02/record02/","title":"Second learning record in April"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Second learning record in April | MErr0rのBlog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MErr0rのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">I turn the page to drown you out</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#leetcode-%E7%83%AD%E9%A2%98HOT-100"><span class="nav-number">1.</span> <span class="nav-text">leetcode 热题HOT 100</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2"><span class="nav-number">1.1.</span> <span class="nav-text">3. 无重复字符的最长子串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">4. 寻找两个正序数组的中位数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2"><span class="nav-number">1.3.</span> <span class="nav-text">5. 最长回文子串</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">2.</span> <span class="nav-text">动态规划的入门学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-number">2.1.</span> <span class="nav-text">509. 斐波那契数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#70-%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="nav-number">2.2.</span> <span class="nav-text">70. 爬楼梯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#746-%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="nav-number">2.3.</span> <span class="nav-text">746. 使用最小花费爬楼梯</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E4%B8%8E%E9%A1%B9%E7%9B%AE%EF%BC%9A-%E4%B8%83%E8%BD%B4%E6%9C%BA%E6%A2%B0%E8%87%82%E7%9A%84%E6%AD%A3%E8%A7%A3%E9%80%86%E8%A7%A3%E5%AD%A6%E4%B9%A0"><span class="nav-number">3.</span> <span class="nav-text">参与项目： 七轴机械臂的正解逆解学习</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="MErr0r"
+      src="/images/xhw.jpg">
+  <p class="site-author-name" itemprop="name">MErr0r</p>
+  <div class="site-description" itemprop="description">合工大研究僧</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/02/record02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xhw.jpg">
+      <meta itemprop="name" content="MErr0r">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MErr0rのBlog">
+      <meta itemprop="description" content="合工大研究僧">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Second learning record in April | MErr0rのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Second learning record in April
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-02 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-02T00:00:00+08:00">2022-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-29 09:02:44" itemprop="dateModified" datetime="2022-04-29T09:02:44+08:00">2022-04-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>分享四月第一周学习内容</p>
+<h1 id="leetcode-热题HOT-100"><a href="#leetcode-热题HOT-100" class="headerlink" title="leetcode 热题HOT 100"></a>leetcode 热题HOT 100</h1><h2 id="3-无重复字符的最长子串"><a href="#3-无重复字符的最长子串" class="headerlink" title="3. 无重复字符的最长子串"></a>3. 无重复字符的最长子串</h2><p>给定一个字符串s，请你找出其中不含有重复字符的最长子串的长度。</p>
+<img src="/2022/05/02/record02/example01.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = s.<span class="built_in">length</span>();</span><br><span class="line">        <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> l = <span class="number">0</span>;</span><br><span class="line">        unordered_map&lt;<span class="type">char</span>,<span class="type">int</span>&gt; Mirror;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line">            Mirror[s[i]]++;</span><br><span class="line">            <span class="keyword">while</span>(Mirror[s[i]] &gt;= <span class="number">2</span>)&#123;</span><br><span class="line">                Mirror[s[l++]]--;</span><br><span class="line">            &#125;</span><br><span class="line">            ret = <span class="built_in">max</span>(ret,i - l +<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-寻找两个正序数组的中位数"><a href="#4-寻找两个正序数组的中位数" class="headerlink" title="4. 寻找两个正序数组的中位数"></a>4. 寻找两个正序数组的中位数</h2><p>给定两个大小分别为m和n的正序（从小到大）数组nums1和nums2。请你找出并返回这两个正序数组的中位数。</p>
+<img src="/2022/05/02/record02/example02.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">int</span> find<span class="constructor">Kth(<span class="params">const</span> <span class="params">vector</span>&lt;<span class="params">int</span>&gt;&amp; <span class="params">a</span>,<span class="params">int</span> <span class="params">sta</span>,<span class="params">const</span> <span class="params">vector</span>&lt;<span class="params">int</span>&gt;&amp; <span class="params">b</span>,<span class="params">int</span> <span class="params">stb</span>,<span class="params">int</span> <span class="params">kth</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(sta &gt;= a.size<span class="literal">()</span>) return b<span class="literal">[<span class="identifier">kth</span> - <span class="number">1</span> + <span class="identifier">stb</span>]</span>;</span><br><span class="line">        <span class="keyword">if</span>(stb &gt;= b.size<span class="literal">()</span>) return a<span class="literal">[<span class="identifier">kth</span> - <span class="number">1</span> + <span class="identifier">sta</span>]</span>;</span><br><span class="line">        <span class="keyword">if</span>(kth<span class="operator"> == </span><span class="number">1</span>) return min(a<span class="literal">[<span class="identifier">sta</span>]</span> , b<span class="literal">[<span class="identifier">stb</span>]</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> h = kth<span class="operator"> / </span><span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> vala = a.size<span class="literal">()</span> - sta &gt;= h ? a<span class="literal">[<span class="identifier">sta</span> + <span class="identifier">h</span> - <span class="number">1</span>]</span> : a.back<span class="literal">()</span>;</span><br><span class="line">        <span class="built_in">int</span> h_a = a.size<span class="literal">()</span> - sta &gt;= h ? h : a.size<span class="literal">()</span> - sta;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> valb = b.size<span class="literal">()</span> - stb &gt;= h ? b<span class="literal">[<span class="identifier">stb</span> + <span class="identifier">h</span> - <span class="number">1</span>]</span> : b.back<span class="literal">()</span>;</span><br><span class="line">        <span class="built_in">int</span> h_b = b.size<span class="literal">()</span> - stb &gt;= h ? h : b.size<span class="literal">()</span> - stb;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(vala &gt;= valb)&#123;</span><br><span class="line">            return find<span class="constructor">Kth(<span class="params">a</span>,<span class="params">sta</span>,<span class="params">b</span>,<span class="params">stb</span> + <span class="params">h_b</span>,<span class="params">kth</span> - <span class="params">h_b</span>)</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            return find<span class="constructor">Kth(<span class="params">a</span>,<span class="params">sta</span> + <span class="params">h_a</span>,<span class="params">b</span>,<span class="params">stb</span>,<span class="params">kth</span> - <span class="params">h_a</span>)</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    double find<span class="constructor">MedianSortedArrays(<span class="params">vector</span>&lt;<span class="params">int</span>&gt;&amp; <span class="params">a</span>, <span class="params">vector</span>&lt;<span class="params">int</span>&gt;&amp; <span class="params">b</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">int</span> n = a.size<span class="literal">()</span>;</span><br><span class="line">        <span class="built_in">int</span> m = b.size<span class="literal">()</span>;</span><br><span class="line">        <span class="built_in">int</span> k = n + m;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> k1 = (k + <span class="number">1</span>)<span class="operator"> / </span><span class="number">2</span>;</span><br><span class="line">        <span class="built_in">int</span> k2 = (k + <span class="number">2</span>)<span class="operator"> / </span><span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> ava_1 = find<span class="constructor">Kth(<span class="params">a</span>,0,<span class="params">b</span>,0,<span class="params">k1</span>)</span>;</span><br><span class="line">        <span class="built_in">int</span> ava_2 = find<span class="constructor">Kth(<span class="params">a</span>,0,<span class="params">b</span>,0,<span class="params">k2</span>)</span>;</span><br><span class="line"></span><br><span class="line">        return <span class="number">1.</span>*(ava_1 + ava_2)<span class="operator"> / </span><span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="5-最长回文子串"><a href="#5-最长回文子串" class="headerlink" title="5. 最长回文子串"></a>5. 最长回文子串</h2><p>给你一个字符串s，找到s中最长的回文子串。</p>
+<img src="/2022/05/02/record02/example03.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="type">string</span> longestPalindrome(<span class="type">string</span> s) &#123;</span><br><span class="line">        <span class="type">int</span> m = s.length();</span><br><span class="line">        vector&lt;vector&lt;<span class="type">bool</span>&gt;&gt; f(m , vector&lt;<span class="type">bool</span>&gt;(m , <span class="literal">false</span>));</span><br><span class="line">        <span class="type">int</span> p_left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> maxlen = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; m;i++)&#123;</span><br><span class="line">            f[i][i] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="built_in">len</span> = <span class="number">2</span>;<span class="built_in">len</span> &lt;= m;<span class="built_in">len</span>++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i + <span class="built_in">len</span> &lt;= m;i++)&#123;</span><br><span class="line">                <span class="type">int</span> j = i + <span class="built_in">len</span> - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(s[i] != s[j]) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">len</span> &gt; <span class="number">2</span> &amp;&amp; f[i+<span class="number">1</span>][j<span class="number">-1</span>] == <span class="literal">false</span>) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">                f[i][j] = <span class="literal">true</span>;</span><br><span class="line">                p_left = i;</span><br><span class="line">                maxlen =<span class="built_in">len</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s.substr(p_left,maxlen);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="动态规划的入门学习"><a href="#动态规划的入门学习" class="headerlink" title="动态规划的入门学习"></a>动态规划的入门学习</h1><h2 id="509-斐波那契数"><a href="#509-斐波那契数" class="headerlink" title="509. 斐波那契数"></a>509. 斐波那契数</h2><p>斐波那契数（通常用 F(n)表示）形成的序列称为斐波那契数列。该数列由0和1开始，后面的每一项数字都是前面两项数字的和。</p>
+<img src="/2022/05/02/record02/example04.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">int</span> fib(<span class="built_in">int</span> N) &#123;</span><br><span class="line">        <span class="built_in">int</span> dp[<span class="number">31</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">2</span>; i &lt;= N; i++) &#123;</span><br><span class="line">            dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[N];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="70-爬楼梯"><a href="#70-爬楼梯" class="headerlink" title="70. 爬楼梯"></a>70. 爬楼梯</h2><p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬1或2个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<img src="/2022/05/02/record02/example05.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">int</span> climbStairs(<span class="built_in">int</span> n) &#123;</span><br><span class="line">        <span class="built_in">int</span> dp[<span class="number">46</span>];</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        dp[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">3</span>;i &lt;= n;i++)&#123;</span><br><span class="line">            dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="746-使用最小花费爬楼梯"><a href="#746-使用最小花费爬楼梯" class="headerlink" title="746. 使用最小花费爬楼梯"></a>746. 使用最小花费爬楼梯</h2><p>给你一个整数数组cost，其中cost[i]是从楼梯第i个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。你可以选择从下标为0或下标为1的台阶开始爬楼梯。请你计算并返回达到楼梯顶部的最低花费。</p>
+<img src="/2022/05/02/record02/example06.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minCostClimbingStairs</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; cost)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> m = cost.<span class="built_in">size</span>();</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dp</span><span class="params">( m + <span class="number">1</span>, <span class="number">0</span> )</span></span>;</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>;i &lt;= m;i++)&#123;</span><br><span class="line">            dp[i] = <span class="built_in">min</span>(dp[i<span class="number">-1</span>]+cost[i<span class="number">-1</span>],dp[i<span class="number">-2</span>]+cost[i<span class="number">-2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[m];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="参与项目：-七轴机械臂的正解逆解学习"><a href="#参与项目：-七轴机械臂的正解逆解学习" class="headerlink" title="参与项目： 七轴机械臂的正解逆解学习"></a>参与项目： 七轴机械臂的正解逆解学习</h1>
+    </div>
+
+    
+    
+    
+    
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+       
+    </div>
+
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%8F%E5%91%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 每周学习</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/24/record01/" rel="prev" title="First learning record">
+                  <i class="fa fa-chevron-left"></i> First learning record
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MErr0r</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"\u003cyour disqus shotname>","count":false,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bg01.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bg01.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"merr0r.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="分享五月第一周学习内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="First learning record in May">
+<meta property="og:url" content="https://merr0r.github.io/2022/05/06/record03/index.html">
+<meta property="og:site_name" content="MErr0rのBlog">
+<meta property="og:description" content="分享五月第一周学习内容">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://merr0r.github.io/2022/05/06/record03/dpExample01.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/05/06/record03/dpExample02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/05/06/record03/dpExample02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/05/06/record03/dpExample03.jpg">
+<meta property="article:published_time" content="2022-05-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-08T13:38:25.777Z">
+<meta property="article:author" content="MErr0r">
+<meta property="article:tag" content="每周学习">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="动态规划">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://merr0r.github.io/2022/05/06/record03/dpExample01.jpg">
+
+
+<link rel="canonical" href="https://merr0r.github.io/2022/05/06/record03/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://merr0r.github.io/2022/05/06/record03/","path":"2022/05/06/record03/","title":"First learning record in May"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>First learning record in May | MErr0rのBlog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MErr0rのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">I turn the page to drown you out</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">动态规划的入门学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#343-%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86"><span class="nav-number">1.1.</span> <span class="nav-text">343. 整数拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E5%8C%85%E4%BA%8C%E7%BB%B4"><span class="nav-number">1.2.</span> <span class="nav-text">背包二维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E5%8C%85%E4%B8%80%E7%BB%B4"><span class="nav-number">1.3.</span> <span class="nav-text">背包一维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86"><span class="nav-number">1.4.</span> <span class="nav-text">分割等和子集</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="MErr0r"
+      src="/images/xhw.jpg">
+  <p class="site-author-name" itemprop="name">MErr0r</p>
+  <div class="site-description" itemprop="description">合工大研究僧</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/23497494?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;23497494?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=519779083&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;519779083&amp;website&#x3D;www.oicqzone.com" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://merr0r.github.io/2022/05/06/record03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xhw.jpg">
+      <meta itemprop="name" content="MErr0r">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MErr0rのBlog">
+      <meta itemprop="description" content="合工大研究僧">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="First learning record in May | MErr0rのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          First learning record in May
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-06 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-06T00:00:00+08:00">2022-05-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-08 21:38:25" itemprop="dateModified" datetime="2022-05-08T21:38:25+08:00">2022-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>分享五月第一周学习内容</p>
+<span id="more"></span>
+<h1 id="动态规划的入门学习"><a href="#动态规划的入门学习" class="headerlink" title="动态规划的入门学习"></a>动态规划的入门学习</h1><p>动态规划：Dynamic Programming，简称DP，如果某⼀问题有很多重叠⼦问题，使⽤动态规划是最有效的。<br>步骤：<br>1.确定dp数组(dp table)以及下标的含义<br>2.确认状态转移方程，即递推公式<br>3.dp数组如何初始化<br>4.遍历顺序的确定<br>5.推导整个dp数组</p>
+<h2 id="343-整数拆分"><a href="#343-整数拆分" class="headerlink" title="343. 整数拆分"></a>343. 整数拆分</h2><p>给定一个正整数n，将其拆分为k个正整数的和（k &gt;&#x3D; 2），并使这些整数的乘积最大化。返回你可以获得的最大乘积。</p>
+<img src="/2022/05/06/record03/dpExample01.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">integerBreak</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dp</span><span class="params">(n+<span class="number">1</span>)</span></span>;</span><br><span class="line">        dp[<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>;i &lt;= n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>;j &lt; i/<span class="number">2</span>+<span class="number">1</span>;j++)&#123;</span><br><span class="line">                dp[i] = <span class="built_in">max</span>(dp[i],<span class="built_in">max</span>(dp[i-j]*j,(i-j)*j));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>首先举个栗子<br>当n&#x3D;2时，拆分的数字为1和1。乘积为1。<br>当n&#x3D;3时，拆分的数字为2和1。乘积为2。<br>当n&#x3D;4时，拆分的数字为2和2。乘积为4。<br>当n&#x3D;5时，拆分的数字为2和3。乘积为6。<br>当n&#x3D;6时，拆分的数字为3和3。乘积为9。<br>当n&#x3D;7时，拆分的数字为2、3和2或者4和3。乘积为12。<br>当n&#x3D;8时，拆分的数字为2、3和3。乘积为18。<br>当n&#x3D;9时，拆分的数字为3、3和3。乘积为27。<br>当n&#x3D;10时，拆分的数字为2、3、2和3。乘积为36。<br>首先第一步要从这些栗子中找到动态规划的规律，我们才能列出dp的含义以及动态方程。<br>乍一看没啥思路，其实我们可以把栗子作进一步拆解。<br>当n&#x3D;2时，拆分的数字为1和1。最大乘积为1。<br>当n&#x3D;3时，拆分的数字为2和1。2的最大乘积乘以1等于1，2的本身乘以1等于2。于是3的最大乘积等于2。<br>当n&#x3D;4时，第一种拆分的数字为3和1。3的最大乘积乘以1等于2，3的本体乘以1等于3；第二种拆分的数字为2和2，2的最大乘积乘以2等于2，2的本身乘以2等于4。于是4的最大乘积等于4。<br>当n&#x3D;5时，第一种拆分方式为4和1。4的最大乘积乘以1等于4，4的本身乘以1等于4。第二种拆分方式为3和2，3的最大乘积乘以2等于4，3的本身乘以2等于6。于是5的最大乘积等于6。<br>当n&#x3D;6时，第一种拆分方式为4和2(1直接略过)。4的最大乘积乘以2等于8，4的本身乘以2等于8。第二种拆分方式为3和3。3的最大乘积乘以3等于6，3的本身乘以3等于9。于是6的最大乘积等于9。<br>当n&#x3D;7时，第一种拆分方式为5和2(1直接略过)。5的最大乘积乘以2等于12，5的本身乘以2等于10。第二种拆分方式为4和3。4的最大乘积乘以3等于12，4的本身乘以3等于12。于是7的最大乘积等于12。<br>当n&#x3D;8时，第一种拆分方式为6和2(1直接略过)。6的最大乘积乘以2等于18，6的本身乘以2等于12。第二种拆分方式为5和3。5的最大乘积乘以3等于18，5的本身乘以3等于15。第三种拆分方式为4和4。4的最大乘积乘以4等于16，4的本身乘以4等于16。于是8的最大乘积等于18。<br>当n&#x3D;9时，第一种拆分方式为7和2(1直接略过)。7的最大乘积乘以2等于24，7的本身乘以2等于14。第二种拆分方式为6和3。6的最大乘积乘以3等于27，6的本身乘以3等于18。第三种拆分方式为5和4。5的最大乘积乘以4等于24，5的本身乘以4等于20。于是9的最大乘积等于27。<br>当n&#x3D;10时，第一种拆分方式为8和2(1直接略过)。8的最大乘积乘以2等于36，8的本身乘以2等于16。第二种拆分方式为7和3。7的最大乘积乘以3等于36，7的本身乘以3等于21。第三种拆分方式为6和4。6的最大乘积乘以4等于36，6的本身乘以4等于24。第四种拆分方式为5和5。5的最大乘积乘以5等于30，5的本身乘以5等于25。于是10的最大乘积等于36。<br>现在思路清晰了，我们先把数字A拆成1和A-1，直接讨论A-1的最大乘积大还是A-1本身大，最大的那个数乘以1得到的结果就是在1状态下数字A的最大乘积。继续把A拆成2和A-2，直接讨论A-2的最大乘积大还是A-2本身大，最大的那个数乘以2得到的结果就是在2状态下数字A的最大乘积……最后比较这些状态下的最大乘积，我们就能得到A的最大乘积。</p>
+<p>1.确定dp数组(dp table)以及下标的含义    dp[i]的含义是在第i个数下的最大乘积。<br>2.确认状态转移方程，即递推公式      dp[i] &#x3D; max(dp[i],max(dp[i-j]*j,(i-j)*j))   max(dp[i-j]*j,(i-j)*j)代表j状态下的i最大乘积，max里的dp[i]代表之前也就是j-1状态下的i最大乘积，两者需要相互比较。<br>3.dp数组如何初始化      dp[2] &#x3D; 1;<br>4.遍历顺序的确定        i表示从第2个数字，按照正序遍历到n。j就代表拆分下的j状态数字。<br>5.推导整个dp数组</p>
+<h2 id="背包二维"><a href="#背包二维" class="headerlink" title="背包二维"></a>背包二维</h2><p>有N件物品和⼀个最多能被重量为W的背包。第i件物品的重量是weight[i]，得到的价值是value[i]。每件物品只能⽤⼀次，求解将哪些物品装⼊背包⾥物品价值总和最⼤。</p>
+<img src="/2022/05/06/record03/dpExample02.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test_weibagPromble</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; weight = &#123;<span class="number">1</span> , <span class="number">3</span> , <span class="number">4</span>&#125;;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; value = &#123;<span class="number">15</span> , <span class="number">20</span>, <span class="number">30</span> &#125;;</span><br><span class="line">	<span class="type">int</span> bagweight = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">	vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">dp</span>(weight.<span class="built_in">size</span>() + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(bagweight + <span class="number">1</span>, <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = bagweight; i &gt;= weight[<span class="number">0</span>]; i--) &#123;</span><br><span class="line">		dp[<span class="number">0</span>][i] = value[<span class="number">0</span>];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; weight.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= bagweight; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (j &lt; weight[i]) &#123;</span><br><span class="line">				dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				dp[i][j] = <span class="built_in">max</span>(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j - weight[i]] + value[i]);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; dp[weight.<span class="built_in">size</span>() - <span class="number">1</span>][bagweight] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test_weibagPromble</span>();</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此题为[代码随想录].pdf上的一道背包题目，所以运行环境不在LeetCode上而是在VS studio上。<br>首先我们联想一下上一道拆分数组。拆分数组的思路是把数字A拆分成1状态和A-1，然后搜寻A-1的最大值。然后拆分成2状态和A-2，然后搜寻1-2的最大值。我们照葫芦画瓢，运用到这题上：<br>假设第一个物品重量为weight[0]，价值为value[0]。背包重量为j，我们就理解成当j&gt;weight[0]时，j此时的最大价值&#x3D;背包重量为j-weight[0]时的最大价值+value[0]。j&lt;weight[0]时，j此时的最大价值&#x3D;没有装入第一个物品的最大价值。<br>假设第二个物品重量为weight[1]，价值为value[1]。背包重量为j，我们就理解成当j&gt;weight[1]时，j此时的最大价值&#x3D;背包重量为j-weight[1]时的最大价值+value[1]。j&lt;weight[1]时，j此时的最大价值&#x3D;没有装入第一个物品的最大价值。<br>但怎么求“背包重量为W-weight[0]时的最大价值”呢？<br>于是我们要遍历从0到W的背包重量，那么很容易看出dp应该是二维数组，dp[i][j]为背包重量为j时装第i个物品的最大价值。<br>那么dp[i][j]是怎么来的？<br>当j&lt;weight[i]时，代表重量为j的背包装不下第i个物品，于是最大价值dp[i][j]应等于重量为j的背包装第i-1件时的物品时的最大值。<br>当j&gt;weight[i]时，代表重量为j的背包能装下第i个物品，于是最大价值dp[i][j]应从重量为j的背包装第i-1件时的物品时的最大值或者背包重量为j-weight[i]时的最大价值+value[i]中选出最大值。<br>那怎么初始化？<br>背包重量为0时，装不下任何物品，故dp[i][0]都为0。<br>讨论第一个物品时，应该背包里没有其他物品，所以当j&gt;weight[0]时，dp[0][j]价值都为第一物品的价值value[0]；当j&lt;weight[0]时，价值依然为0。</p>
+<p>1.确定dp数组(dp table)以及下标的含义    dp[i][j]为背包重量为j时装第i个物品的最大价值。<br>2.确认状态转移方程，即递推公式      当j&lt;weight[i]时，dp[i][j]&#x3D; dp[i - 1][j]。 当j&gt;weight[i]时，dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);<br>3.dp数组如何初始化      dp[0][i] &#x3D; value[0]  当j&gt;weight[0]时，dp[0][j]价值都为第一物品的价值value[0]；当j&lt;weight[0]时，价值依然为0。<br>4.遍历顺序的确定        i代表物品，因为C++数组的原因，本应从0开始遍历，但之前初始化了，所以从1开始（也就是从第二个物品）开始遍历。j代表背包重量，从0开始<br>5.推导整个dp数组</p>
+<h2 id="背包一维"><a href="#背包一维" class="headerlink" title="背包一维"></a>背包一维</h2><p>有N件物品和⼀个最多能被重量为W的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。每件物品只能⽤⼀次，求解将哪些物品装⼊背包⾥物品价值总和最⼤。</p>
+<img src="/2022/05/06/record03/dpExample02.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test_weibagPromble</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; weight = &#123; <span class="number">1</span> , <span class="number">3</span> , <span class="number">4</span> &#125;;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; value = &#123; <span class="number">15</span> , <span class="number">20</span>, <span class="number">30</span> &#125;;</span><br><span class="line">	<span class="type">int</span> bagweight = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dp1</span><span class="params">(bagweight + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; weight.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = bagweight; j &gt;= weight[i]; j--) &#123;</span><br><span class="line">			dp1[j] = <span class="built_in">max</span>(dp1[j], dp1[j - weight[i]] + value[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; dp1[bagweight] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test_weibagPromble</span>();</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此题为[代码随想录].pdf上的一道背包题目，所以运行环境不在LeetCode上而是在VS studio上。<br>之前的dp为二维数组。那怎么运用到一维数组？<br>二维dp数组的含义是 dp[i][j]为背包重量为j时装第i个物品的最大价值，dp[i]如果表示第i个物品的最大价值显然不行，那么表示成dp[j]为背包重量为j时的最大价值呢。<br>那么dp[j]怎么来呢？<br>回顾一下二维数组的dp来源<br>当j&lt;weight[i]时，代表重量为j的背包装不下第i个物品，于是最大价值dp[i][j]应等于重量为j的背包装第i-1件时的物品时的最大值。<br>当j&gt;weight[i]时，代表重量为j的背包能装下第i个物品，于是最大价值dp[i][j]应从重量为j的背包装第i-1件时的物品时的最大值或者背包重量为j-weight[i]时的最大价值+value[i]中选出最大值。<br>那么更换成一维数组dp<br>当j&lt;weight[i]时，代表重量为j的背包装不下第i个物品，于是最大价值dp[j]应等于重量为j的背包装第i-1件时的物品时的最大值。<br>当j&gt;weight[i]时，代表重量为j的背包能装下第i个物品，于是最大价值dp[j]应从重量为j的背包装第i-1件时的物品时的最大值或者背包重量为j-weight[i]时的最大价值+value[i]中选出最大值。<br>那么可以确认 dp[j] &#x3D; max(dp[j],dp[j - weight[i]] + value[i]) max里的dp[j]就是重量为j的背包装第i-1件时的物品时的最大值。<br>那怎么初始化？<br>众所周知重量为0时啥也装不下，所以价值必为0，所以dp[0] &#x3D; 0；从max和value不可能为负数可以得知，我们也可以把dp整个数组的数都初始为0，定义为0对之后在max里取最大值也没啥影响。<br>遍历顺序怎么确定？<br>如果是正序，那么会遇到一个问题。假如物品重量为1，价值为value[1]<br>当j&#x3D;1时，dp[1]&#x3D;value[1]。<br>当j&#x3D;2时候，因为dp[2] &#x3D; max(dp[2],dp[2 - weight[1]] + value[1])，max里的dp[2]&#x3D;0，dp[2 - weight[1]] + value[1]&#x3D;dp[1]+value[1]&#x3D;2xvalue[1]。也就是说在j&#x3D;2的时候value取了两次值。<br>所以不能正序遍历，那逆序呢？<br>当j&#x3D;4时，因为dp[4] &#x3D; max(dp[4],dp[4 - weight[1]] + value[1])，max里的dp[4]&#x3D;0，dp[4 - weight[1]] + value[1]&#x3D;dp[3]+value[1]&#x3D;value[1]。<br>当j&#x3D;3时候，因为dp[3] &#x3D; max(dp[3],dp[3 - weight[1]] + value[1])，max里的dp[3]&#x3D;0，dp[3 - weight[1]] + value[1]&#x3D;dp[2]+value[1]&#x3D;value[1]。这样就不会产生取两次值的情况。</p>
+<p>1.确定dp数组(dp table)以及下标的含义    dp[j]为背包重量为j时的最大价值。<br>2.确认状态转移方程，即递推公式      dp[j] &#x3D; max(dp[j],dp[j - weight[i]] + value[i])<br>3.dp数组如何初始化      dp[j]&#x3D; 0<br>4.遍历顺序的确定        逆序。<br>5.推导整个dp数组</p>
+<h2 id="分割等和子集"><a href="#分割等和子集" class="headerlink" title="分割等和子集"></a>分割等和子集</h2><p>给你一个只包含正整数的非空数组nums。请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
+<img src="/2022/05/06/record03/dpExample03.jpg" class="" title="这是一张图片">
+<p>先贴出答案，然后一步步讲解。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">canPartition</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            sum += nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sum % <span class="number">2</span> == <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="type">int</span> sumHalf = sum/<span class="number">2</span>;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dp</span><span class="params">(sumHalf + <span class="number">1</span>,<span class="number">0</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = sumHalf;j &gt;= nums[i];j--)&#123;</span><br><span class="line">                dp[j] = <span class="built_in">max</span>(dp[j],dp[j-nums[i]]+nums[i]); </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(dp[sumHalf] == sumHalf) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>两个子集的元素和相等，可以推断出两个子集的元素和相加等于原数组nums各个数字之和，换句话说两个子集元素的和是nums各个元素和的一半，所以不难判断如果nums各个元素和为奇数，那么false。<br>那么怎么确认dp[i]还是dp[i][j]？<br>刚才我们分析出两个子集的元素和等于nums各个元素和的一半，我们令nums的和为sum，子集元素和为sumHalf。我们可以能把这题转换为刚才的背包问题，两个子集就是两个背包，sumHalf为背包重量，nums里的元素即为物品重量，这里的价值可以看成放入背包物品的最大重量，最大容量不能超过背包重量。根据之前的背包一维dp[j]为背包重量为j时的最大价值可以推断出dp[i]为背包重量为i时候的放入物品的最大重量。那么我要做的就是在背包重量为sumHalf时(dp[sumHalf])放入物品的最大重量等于sumHalf，那样的话另一个背包放入物品的最大重量必定sum-dp[sumHalf],如果sumHalf &#x3D;&#x3D; sum-dp[sumHalf]，或者dp[sumHalf] &#x3D; sumHalf，那直接返回true。<br>那怎么初始化？<br>跟之前一维背包一样，全部定义为0即可。<br>遍历顺序跟一维背包一样，采用逆序。<br>1.确定dp数组(dp table)以及下标的含义    dp[j]为背包重量为j时的放入物品的最大重量。<br>2.确认状态转移方程，即递推公式      dp[j] &#x3D; max(dp[j],dp[j - nums[i]] + nums[i])<br>3.dp数组如何初始化      dp[j]&#x3D; 0<br>4.遍历顺序的确定        逆序。<br>5.推导整个dp数组</p>
+<p>OK~动态规划就学这么多(其实还有一题- -)，因为最近学校解封，跟同学各种聚餐…所以就更了这么点- -下周好好干会来！！多学点知识！！</p>
+
+    </div>
+
+    
+    
+    
+    
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+       
+    </div>
+
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%8F%E5%91%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 每周学习</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"># 动态规划</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/05/01/record02/" rel="prev" title="Second learning record in April">
+                  <i class="fa fa-chevron-left"></i> Second learning record in April
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MErr0r</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"\u003cyour disqus shotname>","count":false,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

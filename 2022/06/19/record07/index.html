@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bg01.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bg01.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"merr0r.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="分享六月第二周学习内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Second learning record in June">
+<meta property="og:url" content="https://merr0r.github.io/2022/06/19/record07/index.html">
+<meta property="og:site_name" content="MErr0rのBlog">
+<meta property="og:description" content="分享六月第二周学习内容">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample01.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample03.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample04.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample05.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample06.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample07.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample08.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample09.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample10.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/06/19/record07/btExample11.jpg">
+<meta property="article:published_time" content="2022-06-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-19T01:03:08.350Z">
+<meta property="article:author" content="MErr0r">
+<meta property="article:tag" content="每周学习">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="二叉树">
+<meta property="article:tag" content="往期回顾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://merr0r.github.io/2022/06/19/record07/btExample01.jpg">
+
+
+<link rel="canonical" href="https://merr0r.github.io/2022/06/19/record07/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://merr0r.github.io/2022/06/19/record07/","path":"2022/06/19/record07/","title":"Second learning record in June"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Second learning record in June | MErr0rのBlog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MErr0rのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">I turn the page to drown you out</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%BE%80%E6%9C%9F%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">动态规划往期回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%A4%9A%E6%95%B0%E9%87%8F-01%E8%83%8C%E5%8C%85"><span class="nav-number">1.1.</span> <span class="nav-text">最多数量 + 01背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%A4%9A%E6%95%B0%E9%87%8F-%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85"><span class="nav-number">1.2.</span> <span class="nav-text">最多数量 + 完全背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%A4%9A%E7%BB%84%E5%90%88-%E4%B8%8D%E5%88%86%E9%A1%BA%E5%BA%8F-01%E8%83%8C%E5%8C%85"><span class="nav-number">1.3.</span> <span class="nav-text">最多组合 + 不分顺序 + 01背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%A4%9A%E7%BB%84%E5%90%88-%E4%B8%8D%E5%88%86%E9%A1%BA%E5%BA%8F-%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85"><span class="nav-number">1.4.</span> <span class="nav-text">最多组合 + 不分顺序 + 完全背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%A4%9A%E7%BB%84%E5%90%88-%E5%88%86%E9%A1%BA%E5%BA%8F-%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85"><span class="nav-number">1.5.</span> <span class="nav-text">最多组合 + 分顺序 + 完全背包</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">2.</span> <span class="nav-text">二叉树入门学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#102-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="nav-number">2.1.</span> <span class="nav-text">102. 二叉树的层序遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#102-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86-1"><span class="nav-number">2.2.</span> <span class="nav-text">102. 二叉树的层序遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#199-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE"><span class="nav-number">2.3.</span> <span class="nav-text">199. 二叉树的右视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#637-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%B9%B3%E5%9D%87%E5%80%BC"><span class="nav-number">2.4.</span> <span class="nav-text">637. 二叉树的层平均值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#429-N-%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="nav-number">2.5.</span> <span class="nav-text">429. N 叉树的层序遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#515-%E5%9C%A8%E6%AF%8F%E4%B8%AA%E6%A0%91%E8%A1%8C%E4%B8%AD%E6%89%BE%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="nav-number">2.6.</span> <span class="nav-text">515. 在每个树行中找最大值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#116-%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88"><span class="nav-number">2.7.</span> <span class="nav-text">116. 填充每个节点的下一个右侧节点指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#117-%E5%A1%AB%E5%85%85%E6%AF%8F%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%B3%E4%BE%A7%E8%8A%82%E7%82%B9%E6%8C%87%E9%92%88-II"><span class="nav-number">2.8.</span> <span class="nav-text">117. 填充每个节点的下一个右侧节点指针 II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#226-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.9.</span> <span class="nav-text">226. 翻转二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#101-%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.10.</span> <span class="nav-text">101. 对称二叉树</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="MErr0r"
+      src="/images/xhw.jpg">
+  <p class="site-author-name" itemprop="name">MErr0r</p>
+  <div class="site-description" itemprop="description">合工大研究僧</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/23497494?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;23497494?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=519779083&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;519779083&amp;website&#x3D;www.oicqzone.com" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://merr0r.github.io/2022/06/19/record07/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xhw.jpg">
+      <meta itemprop="name" content="MErr0r">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MErr0rのBlog">
+      <meta itemprop="description" content="合工大研究僧">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Second learning record in June | MErr0rのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Second learning record in June
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-06-19 00:00:00 / 修改时间：09:03:08" itemprop="dateCreated datePublished" datetime="2022-06-19T00:00:00+08:00">2022-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>分享六月第二周学习内容</p>
+<span id="more"></span>
+<h1 id="动态规划往期回顾"><a href="#动态规划往期回顾" class="headerlink" title="动态规划往期回顾"></a>动态规划往期回顾</h1><p>进行一个温故而知新！<br>常规题目如果只有一个条件限制，一般设dp为一维数组。如果有多个条件，那就设dp为多维数组。<br>限制条件分两种：①最多数量②最多组合<br>最多组合分两种：①不分顺序②分顺序<br>背包分为①01背包，即限制物品的数量②完全背包，即不限制物品的数量</p>
+<h2 id="最多数量-01背包"><a href="#最多数量-01背包" class="headerlink" title="最多数量 + 01背包"></a>最多数量 + 01背包</h2><p>解决模板：先遍历物品，从小到大；再遍历背包重量，从大到小遍历。<br>常用的状态方程：dp[j] &#x3D; max(dp[j] , dp[j - value[i]] + weight[i]) </p>
+<h2 id="最多数量-完全背包"><a href="#最多数量-完全背包" class="headerlink" title="最多数量 + 完全背包"></a>最多数量 + 完全背包</h2><p>解决模板：先遍历物品，从小到大；再遍历背包重量，从小到大遍历。<br>常用的状态方程：dp[j] &#x3D; max(dp[j] , dp[j - value[i]] + weight[i]) </p>
+<h2 id="最多组合-不分顺序-01背包"><a href="#最多组合-不分顺序-01背包" class="headerlink" title="最多组合 + 不分顺序 + 01背包"></a>最多组合 + 不分顺序 + 01背包</h2><p>解决模板：先遍历物品，从小到大；再遍历背包重量，从大到小遍历。<br>常用的状态方程：dp[j] +&#x3D; dp[j - coins[i]] </p>
+<h2 id="最多组合-不分顺序-完全背包"><a href="#最多组合-不分顺序-完全背包" class="headerlink" title="最多组合 + 不分顺序 + 完全背包"></a>最多组合 + 不分顺序 + 完全背包</h2><p>解决模板：先遍历物品，从小到大；再遍历背包重量，从小到大遍历。<br>常用的状态方程：dp[j] +&#x3D; dp[j - coins[i]]</p>
+<h2 id="最多组合-分顺序-完全背包"><a href="#最多组合-分顺序-完全背包" class="headerlink" title="最多组合 + 分顺序 + 完全背包"></a>最多组合 + 分顺序 + 完全背包</h2><p>解决模板：先遍历背包重量，从小到大；再遍历物体，从小到大遍历。<br>常用的状态方程：dp[j] +&#x3D; dp[j - coins[i]]</p>
+<h1 id="二叉树入门学习"><a href="#二叉树入门学习" class="headerlink" title="二叉树入门学习"></a>二叉树入门学习</h1><h2 id="102-二叉树的层序遍历"><a href="#102-二叉树的层序遍历" class="headerlink" title="102. 二叉树的层序遍历"></a>102. 二叉树的层序遍历</h2><p>给你二叉树的根节点 root ，返回其节点值的层序遍历 。（即逐层地，从左到右访问所有节点）。</p>
+<img src="/2022/06/19/record07/btExample01.jpg" class="" title="这是一张图片">
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">levelOrder</span>(TreeNode* root) &#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line">        <span class="keyword">if</span>(root != <span class="literal">NULL</span>)&#123;</span><br><span class="line">            que.<span class="built_in">push</span>(root);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            <span class="type">int</span> size = que.<span class="built_in">size</span>();</span><br><span class="line">            vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; size;i++)&#123;</span><br><span class="line">                TreeNode* cur = que.<span class="built_in">front</span>();</span><br><span class="line">                que.<span class="built_in">pop</span>();</span><br><span class="line">                vec.<span class="built_in">push_back</span>(cur-&gt;val);</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;left)&#123;</span><br><span class="line">                    que.<span class="built_in">push</span>(cur-&gt;left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;right)&#123;</span><br><span class="line">                    que.<span class="built_in">push</span>(cur-&gt;right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            result.<span class="built_in">push_back</span>(vec);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="102-二叉树的层序遍历-1"><a href="#102-二叉树的层序遍历-1" class="headerlink" title="102. 二叉树的层序遍历"></a>102. 二叉树的层序遍历</h2><p>给你二叉树的根节点root，返回其节点值自底向上的层序遍历。（即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历)</p>
+<img src="/2022/06/19/record07/btExample02.jpg" class="" title="这是一张图片">
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">levelOrder</span>(TreeNode* root) &#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line">        <span class="keyword">if</span>(root != <span class="literal">NULL</span>)&#123;</span><br><span class="line">            que.<span class="built_in">push</span>(root);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            <span class="type">int</span> size = que.<span class="built_in">size</span>();</span><br><span class="line">            vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; size;i++)&#123;</span><br><span class="line">                TreeNode* cur = que.<span class="built_in">front</span>();</span><br><span class="line">                que.<span class="built_in">pop</span>();</span><br><span class="line">                vec.<span class="built_in">push_back</span>(cur-&gt;val);</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;left)&#123;</span><br><span class="line">                    que.<span class="built_in">push</span>(cur-&gt;left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;right)&#123;</span><br><span class="line">                    que.<span class="built_in">push</span>(cur-&gt;right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            result.<span class="built_in">push_back</span>(vec);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">reverse</span>(result.<span class="built_in">begin</span>(),result.<span class="built_in">end</span>());</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="199-二叉树的右视图"><a href="#199-二叉树的右视图" class="headerlink" title="199. 二叉树的右视图"></a>199. 二叉树的右视图</h2><p>给定一个二叉树的根节点 root，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</p>
+<img src="/2022/06/19/record07/btExample03.jpg" class="" title="这是一张图片">
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * <span class="keyword">Definition</span> <span class="keyword">for</span> a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *<span class="built_in">left</span>;</span><br><span class="line"> *     TreeNode *<span class="built_in">right</span>;</span><br><span class="line"> *     TreeNode() : val(<span class="number">0</span>), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x) : val(x), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x, TreeNode *<span class="built_in">left</span>, TreeNode *<span class="built_in">right</span>) : val(x), <span class="built_in">left</span>(<span class="built_in">left</span>), <span class="built_in">right</span>(<span class="built_in">right</span>) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; rightSideView(TreeNode* root) &#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        vector&lt;int&gt; result;</span><br><span class="line">        <span class="keyword">if</span>(root != NULL)&#123;</span><br><span class="line">            que.push(root);</span><br><span class="line">        &#125;</span><br><span class="line">        while(!que.empty())&#123;</span><br><span class="line">            int size = que.size();</span><br><span class="line">            <span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt; size;i++)&#123;</span><br><span class="line">                TreeNode* cur = que.front();</span><br><span class="line">                que.pop();</span><br><span class="line">                <span class="keyword">if</span>(i == (size - <span class="number">1</span>))&#123;</span><br><span class="line">                    result.push_back(cur-&gt;val);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;<span class="built_in">left</span>)&#123;</span><br><span class="line">                    que.push(cur-&gt;<span class="built_in">left</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;<span class="built_in">right</span>)&#123;</span><br><span class="line">                    que.push(cur-&gt;<span class="built_in">right</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="637-二叉树的层平均值"><a href="#637-二叉树的层平均值" class="headerlink" title="637. 二叉树的层平均值"></a>637. 二叉树的层平均值</h2><p>给定一个非空二叉树的根节点 root , 以数组的形式返回每一层节点的平均值。与实际答案相差 10-5 以内的答案可以被接受。</p>
+<img src="/2022/06/19/record07/btExample04.jpg" class="" title="这是一张图片">
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * <span class="keyword">Definition</span> <span class="keyword">for</span> a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *<span class="built_in">left</span>;</span><br><span class="line"> *     TreeNode *<span class="built_in">right</span>;</span><br><span class="line"> *     TreeNode() : val(<span class="number">0</span>), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x) : val(x), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x, TreeNode *<span class="built_in">left</span>, TreeNode *<span class="built_in">right</span>) : val(x), <span class="built_in">left</span>(<span class="built_in">left</span>), <span class="built_in">right</span>(<span class="built_in">right</span>) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; rightSideView(TreeNode* root) &#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        vector&lt;<span class="built_in">double</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span>(root != NULL)&#123;</span><br><span class="line">            que.push(root);</span><br><span class="line">        &#125;</span><br><span class="line">        while(!que.empty())&#123;</span><br><span class="line">            <span class="built_in">double</span> size = que.size();</span><br><span class="line">            <span class="built_in">double</span> <span class="built_in">sum</span> = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt; size;i++)&#123;</span><br><span class="line">                TreeNode* cur = que.front();</span><br><span class="line">                que.pop();</span><br><span class="line">                <span class="built_in">sum</span> += cur-&gt;val;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;<span class="built_in">left</span>)&#123;</span><br><span class="line">                    que.push(cur-&gt;<span class="built_in">left</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;<span class="built_in">right</span>)&#123;</span><br><span class="line">                    que.push(cur-&gt;<span class="built_in">right</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            result.push_back(<span class="built_in">sum</span>/size);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>但我写成这样：</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * <span class="keyword">Definition</span> <span class="keyword">for</span> a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *<span class="built_in">left</span>;</span><br><span class="line"> *     TreeNode *<span class="built_in">right</span>;</span><br><span class="line"> *     TreeNode() : val(<span class="number">0</span>), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x) : val(x), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x, TreeNode *<span class="built_in">left</span>, TreeNode *<span class="built_in">right</span>) : val(x), <span class="built_in">left</span>(<span class="built_in">left</span>), <span class="built_in">right</span>(<span class="built_in">right</span>) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; rightSideView(TreeNode* root) &#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        vector&lt;<span class="built_in">double</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span>(root != NULL)&#123;</span><br><span class="line">            que.push(root);</span><br><span class="line">        &#125;</span><br><span class="line">        while(!que.empty())&#123;</span><br><span class="line">            <span class="built_in">double</span> size = que.size();</span><br><span class="line">            <span class="built_in">double</span> <span class="built_in">sum</span> = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt; size;i++)&#123;</span><br><span class="line">                TreeNode* cur = que.front();</span><br><span class="line">                que.pop();</span><br><span class="line">                <span class="built_in">sum</span> = <span class="built_in">sum</span> + (cur-&gt;val)/size;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;<span class="built_in">left</span>)&#123;</span><br><span class="line">                    que.push(cur-&gt;<span class="built_in">left</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;<span class="built_in">right</span>)&#123;</span><br><span class="line">                    que.push(cur-&gt;<span class="built_in">right</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            result.push_back(<span class="built_in">sum</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>就会报错！！</p>
+<img src="/2022/06/19/record07/btExample05.jpg" class="" title="这是一张图片">
+
+<h2 id="429-N-叉树的层序遍历"><a href="#429-N-叉树的层序遍历" class="headerlink" title="429. N 叉树的层序遍历"></a>429. N 叉树的层序遍历</h2><p>给定一个 N 叉树，返回其节点值的层序遍历。（即从左到右，逐层遍历）。<br>树的序列化输入是用层序遍历，每组子节点都由 null 值分隔（参见示例）。</p>
+<img src="/2022/06/19/record07/btExample06.jpg" class="" title="这是一张图片">
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">// Definition for a Node.</span></span><br><span class="line"><span class="comment">class Node &#123;</span></span><br><span class="line"><span class="comment">public:</span></span><br><span class="line"><span class="comment">    int val;</span></span><br><span class="line"><span class="comment">    vector&lt;Node*&gt; children;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    Node() &#123;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    Node(int _val) &#123;</span></span><br><span class="line"><span class="comment">        val = _val;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    Node(int _val, vector&lt;Node*&gt; _children) &#123;</span></span><br><span class="line"><span class="comment">        val = _val;</span></span><br><span class="line"><span class="comment">        children = _children;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">levelOrder</span>(Node* root) &#123;</span><br><span class="line">        queue&lt;Node*&gt; que;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line">        <span class="keyword">if</span>(root != <span class="literal">NULL</span>)&#123;</span><br><span class="line">            que.<span class="built_in">push</span>(root);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">            <span class="type">int</span> size = que.<span class="built_in">size</span>();</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; size;i++)&#123;</span><br><span class="line">                Node* node = que.<span class="built_in">front</span>();</span><br><span class="line">                que.<span class="built_in">pop</span>();</span><br><span class="line">                vec.<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; node-&gt;children.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(node-&gt;children[i])&#123;</span><br><span class="line">                        que.<span class="built_in">push</span>(node-&gt;children[i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            result.<span class="built_in">push_back</span>(vec);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="515-在每个树行中找最大值"><a href="#515-在每个树行中找最大值" class="headerlink" title="515. 在每个树行中找最大值"></a>515. 在每个树行中找最大值</h2><p>给定一棵二叉树的根节点 root ，请找出该二叉树中每一层的最大值。</p>
+<img src="/2022/06/19/record07/btExample07.jpg" class="" title="这是一张图片">
+<figure class="highlight sml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * <span class="type">Definition</span> for a binary tree node.</span><br><span class="line"> * <span class="keyword">struct</span> <span class="type">TreeNode</span> &#123;</span><br><span class="line"> *     <span class="built_in">int</span> <span class="keyword">val</span>;</span><br><span class="line"> *     <span class="type">TreeNode</span> *left;</span><br><span class="line"> *     <span class="type">TreeNode</span> *right;</span><br><span class="line"> *     <span class="type">TreeNode</span><span class="literal">()</span> : <span class="keyword">val</span>(<span class="number">0</span>), left(nullptr), right(nullptr) &#123;&#125;</span><br><span class="line"> *     <span class="type">TreeNode</span>(<span class="built_in">int</span> x) : <span class="keyword">val</span>(x), left(nullptr), right(nullptr) &#123;&#125;</span><br><span class="line"> *     <span class="type">TreeNode</span>(<span class="built_in">int</span> x, <span class="type">TreeNode</span> *left, <span class="type">TreeNode</span> *right) : <span class="keyword">val</span>(x), left(left), right(right) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line">class <span class="type">Solution</span> &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">int</span>&gt; largestValues(<span class="type">TreeNode</span>* root) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">int</span>&gt; result;</span><br><span class="line">        queue&lt;<span class="type">TreeNode</span>*&gt; que;</span><br><span class="line">        <span class="keyword">if</span>(root != <span class="type">NULL</span>)&#123;</span><br><span class="line">            que.push(root);</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">while</span>(!que.empty<span class="literal">()</span>)&#123;</span><br><span class="line">            <span class="built_in">int</span> size = que.size<span class="literal">()</span>;</span><br><span class="line">            <span class="built_in">int</span> m = <span class="type">INT_MIN</span>;</span><br><span class="line">            for(<span class="built_in">int</span> i = <span class="number">0</span>;i&lt; size;i++)&#123;</span><br><span class="line">                <span class="type">TreeNode</span>* cur = que.front<span class="literal">()</span>;</span><br><span class="line">                que.pop<span class="literal">()</span>;</span><br><span class="line">                <span class="keyword">if</span>(m &lt; cur-&gt;<span class="keyword">val</span>)&#123;</span><br><span class="line">                    m = cur-&gt;<span class="keyword">val</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;left)&#123;</span><br><span class="line">                    que.push(cur-&gt;left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;right)&#123;</span><br><span class="line">                    que.push(cur-&gt;right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            result.push_back(m);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="116-填充每个节点的下一个右侧节点指针"><a href="#116-填充每个节点的下一个右侧节点指针" class="headerlink" title="116. 填充每个节点的下一个右侧节点指针"></a>116. 填充每个节点的下一个右侧节点指针</h2><p>给定一个 完美二叉树 ，其所有叶子节点都在同一层，每个父节点都有两个子节点。填充它的每个 next 指针，让这个指针指向其下一个右侧节点。如果找不到下一个右侧节点，则将 next 指针设置为 NULL。<br>初始状态下，所有 next 指针都被设置为 NULL。</p>
+<img src="/2022/06/19/record07/btExample08.jpg" class="" title="这是一张图片">
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">// <span class="type">Definition</span> for a <span class="type">Node</span>.</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Node</span> &#123;</span></span><br><span class="line"><span class="class">public:</span></span><br><span class="line"><span class="class">    int val;</span></span><br><span class="line"><span class="class">    <span class="type">Node</span>* left;</span></span><br><span class="line"><span class="class">    <span class="type">Node</span>* right;</span></span><br><span class="line"><span class="class">    <span class="type">Node</span>* next;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    <span class="type">Node</span>() : val(0), left(<span class="type">NULL</span>), right(<span class="type">NULL</span>), next(<span class="type">NULL</span>) &#123;&#125;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    <span class="type">Node</span>(<span class="title">int</span> <span class="title">_val</span>) : val(<span class="title">_val</span>), left(<span class="type">NULL</span>), right(<span class="type">NULL</span>), next(<span class="type">NULL</span>) &#123;&#125;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    <span class="type">Node</span>(<span class="title">int</span> <span class="title">_val</span>, <span class="type">Node</span>* <span class="title">_left</span>, <span class="type">Node</span>* <span class="title">_right</span>, <span class="type">Node</span>* <span class="title">_next</span>)</span></span><br><span class="line"><span class="class">        : val(<span class="title">_val</span>), left(<span class="title">_left</span>), right(<span class="title">_right</span>), next(<span class="title">_next</span>) &#123;&#125;</span></span><br><span class="line"><span class="class">&#125;;</span></span><br><span class="line"><span class="class">*/</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Solution</span> &#123;</span></span><br><span class="line"><span class="class">public:</span></span><br><span class="line"><span class="class">    <span class="type">Node</span>* connect(<span class="type">Node</span>* <span class="title">root</span>) &#123;</span></span><br><span class="line"><span class="class">        queue&lt;<span class="type">Node</span>*&gt; que;</span></span><br><span class="line"><span class="class">        if(<span class="title">root</span> != <span class="type">NULL</span>)&#123;</span></span><br><span class="line"><span class="class">            que.push(<span class="title">root</span>);</span></span><br><span class="line"><span class="class">        &#125;</span></span><br><span class="line"><span class="class">        while(!<span class="title">que</span>.<span class="title">empty</span>())&#123;</span></span><br><span class="line"><span class="class">            <span class="type">Node</span>* cur;</span></span><br><span class="line"><span class="class">            <span class="type">Node</span>* preCur;</span></span><br><span class="line"><span class="class">            int size = que.size();</span></span><br><span class="line"><span class="class">            for(<span class="title">int</span> <span class="title">i</span> = 0; <span class="title">i</span> &lt; <span class="title">size</span>;<span class="title">i</span>++)&#123;</span></span><br><span class="line"><span class="class">                if(<span class="title">i</span> == 0)&#123;</span></span><br><span class="line"><span class="class">                    preCur = que.front();</span></span><br><span class="line"><span class="class">                    que.pop();</span></span><br><span class="line"><span class="class">                    cur = preCur;</span></span><br><span class="line"><span class="class">                &#125;else&#123;</span></span><br><span class="line"><span class="class">                    cur = que.front();</span></span><br><span class="line"><span class="class">                    que.pop();</span></span><br><span class="line"><span class="class">                    preCur-&gt;next = cur;</span></span><br><span class="line"><span class="class">                    preCur = preCur-&gt;next;</span></span><br><span class="line"><span class="class">                &#125;  </span></span><br><span class="line"><span class="class">                if(<span class="title">cur</span>-&gt;<span class="title">left</span>)&#123;</span></span><br><span class="line"><span class="class">                    que.push(<span class="title">cur</span>-&gt;<span class="title">left</span>);</span></span><br><span class="line"><span class="class">                &#125; </span></span><br><span class="line"><span class="class">                if(<span class="title">cur</span>-&gt;<span class="title">right</span>)&#123;</span></span><br><span class="line"><span class="class">                    que.push(<span class="title">cur</span>-&gt;<span class="title">right</span>);</span></span><br><span class="line"><span class="class">                &#125;      </span></span><br><span class="line"><span class="class">            &#125;</span></span><br><span class="line"><span class="class">            cur-&gt;next = <span class="type">NULL</span>; </span></span><br><span class="line"><span class="class">        &#125;</span></span><br><span class="line"><span class="class">        return root;</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">&#125;;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="117-填充每个节点的下一个右侧节点指针-II"><a href="#117-填充每个节点的下一个右侧节点指针-II" class="headerlink" title="117. 填充每个节点的下一个右侧节点指针 II"></a>117. 填充每个节点的下一个右侧节点指针 II</h2><p>给定一个 二叉树 填充它的每个 next 指针，让这个指针指向其下一个右侧节点。如果找不到下一个右侧节点，则将 next 指针设置为 NULL。<br>初始状态下，所有 next 指针都被设置为 NULL。</p>
+<img src="/2022/06/19/record07/btExample09.jpg" class="" title="这是一张图片">
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">// Definition for a Node.</span><br><span class="line">class <span class="keyword">Node</span> <span class="title">&#123;</span></span><br><span class="line"><span class="title">public</span>:</span><br><span class="line">    int val;</span><br><span class="line">    <span class="keyword">Node</span><span class="title">* left</span>;</span><br><span class="line">    <span class="keyword">Node</span><span class="title">* right</span>;</span><br><span class="line">    <span class="keyword">Node</span><span class="title">* next</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">Node</span><span class="title">() : val</span>(<span class="number">0</span>), left(NULL), right(NULL), next(NULL) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">Node</span><span class="title">(int</span> _val) : val(_val), left(NULL), right(NULL), next(NULL) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">Node</span><span class="title">(int</span> _val, <span class="keyword">Node</span><span class="title">* _left</span>, <span class="keyword">Node</span><span class="title">* _right</span>, <span class="keyword">Node</span><span class="title">* _next</span>)</span><br><span class="line">        : val(_val), left(_left), right(_right), next(_next) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="keyword">Node</span><span class="title">* connect</span>(<span class="keyword">Node</span><span class="title">* root</span>) &#123;</span><br><span class="line">        queue<span class="tag">&lt;Node*&gt;</span> que;</span><br><span class="line">        if(root != NULL)&#123;</span><br><span class="line">            que.push(root);</span><br><span class="line">        &#125;</span><br><span class="line">        while(!que.empty())&#123;</span><br><span class="line">            <span class="keyword">Node</span><span class="title">* node</span>;</span><br><span class="line">            <span class="keyword">Node</span><span class="title">* nodePre</span>;</span><br><span class="line">            int size = que.size();</span><br><span class="line">            for(int i = <span class="number">0</span>;i <span class="tag">&lt; size;i++)&#123;</span></span><br><span class="line"><span class="tag">                if( i == 0 )&#123;</span></span><br><span class="line"><span class="tag">                    nodePre = que.front();</span></span><br><span class="line"><span class="tag">                    que.pop();</span></span><br><span class="line"><span class="tag">                    node = nodePre;</span></span><br><span class="line"><span class="tag">                &#125;else&#123;</span></span><br><span class="line"><span class="tag">                    node = que.front();</span></span><br><span class="line"><span class="tag">                    que.pop();</span></span><br><span class="line"><span class="tag">                    nodePre-&gt;</span>next = <span class="keyword">node</span><span class="title">;</span></span><br><span class="line"><span class="title">                    nodePre</span> = nodePre-&gt;next;</span><br><span class="line">                &#125;</span><br><span class="line">                if(<span class="keyword">node</span><span class="title">-&gt;left</span>)&#123;</span><br><span class="line">                    que.push(<span class="keyword">node</span><span class="title">-&gt;left</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                if(<span class="keyword">node</span><span class="title">-&gt;right</span>)&#123;</span><br><span class="line">                    que.push(<span class="keyword">node</span><span class="title">-&gt;right</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            nodePre-&gt;next = NULL;</span><br><span class="line">        &#125;</span><br><span class="line">        return root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="226-翻转二叉树"><a href="#226-翻转二叉树" class="headerlink" title="226. 翻转二叉树"></a>226. 翻转二叉树</h2><p>给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。</p>
+<img src="/2022/06/19/record07/btExample10.jpg" class="" title="这是一张图片">
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode() : val(<span class="number">0</span>), left(nullptr), right(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    TreeNode* invertTree(TreeNode* root) &#123;</span><br><span class="line">        queue<span class="tag">&lt;TreeNode*&gt;</span> que;</span><br><span class="line">        if(root != NULL)&#123;</span><br><span class="line">            que.push(root);</span><br><span class="line">        &#125;</span><br><span class="line">        while(!que.empty())&#123;</span><br><span class="line">            int size = que.size();</span><br><span class="line">            TreeNode* <span class="keyword">node</span> <span class="title">= que</span>.front();</span><br><span class="line">            TreeNode* cur = <span class="keyword">node</span><span class="title">-&gt;left</span>;</span><br><span class="line">            <span class="keyword">node</span><span class="title">-&gt;left</span> = <span class="keyword">node</span><span class="title">-&gt;right</span>;</span><br><span class="line">            <span class="keyword">node</span><span class="title">-&gt;right</span> = cur;</span><br><span class="line">            que.pop();</span><br><span class="line">            if(<span class="keyword">node</span><span class="title">-&gt;left</span>)&#123;</span><br><span class="line">                que.push(<span class="keyword">node</span><span class="title">-&gt;left</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            if(<span class="keyword">node</span><span class="title">-&gt;right</span>)&#123;</span><br><span class="line">                que.push(<span class="keyword">node</span><span class="title">-&gt;right</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="101-对称二叉树"><a href="#101-对称二叉树" class="headerlink" title="101. 对称二叉树"></a>101. 对称二叉树</h2><p>给你一个二叉树的根节点 root ，检查它是否轴对称。</p>
+<img src="/2022/06/19/record07/btExample11.jpg" class="" title="这是一张图片">
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * <span class="keyword">Definition</span> <span class="keyword">for</span> a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *<span class="built_in">left</span>;</span><br><span class="line"> *     TreeNode *<span class="built_in">right</span>;</span><br><span class="line"> *     TreeNode() : val(<span class="number">0</span>), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x) : val(x), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x, TreeNode *<span class="built_in">left</span>, TreeNode *<span class="built_in">right</span>) : val(x), <span class="built_in">left</span>(<span class="built_in">left</span>), <span class="built_in">right</span>(<span class="built_in">right</span>) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    bool <span class="built_in">compare</span>(TreeNode* <span class="built_in">left</span>,TreeNode* <span class="built_in">right</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">left</span> == NULL &amp;&amp; <span class="built_in">right</span> != NULL)&#123;</span><br><span class="line">            <span class="keyword">return</span> false;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">left</span> != NULL &amp;&amp; <span class="built_in">right</span> == NULL)&#123;</span><br><span class="line">            <span class="keyword">return</span> false;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">left</span> == NULL &amp;&amp; <span class="built_in">right</span> == NULL)&#123;</span><br><span class="line">            <span class="keyword">return</span> true;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>((<span class="built_in">left</span>-&gt;val != <span class="built_in">right</span>-&gt;val))&#123;</span><br><span class="line">            <span class="keyword">return</span> false;</span><br><span class="line">        &#125;</span><br><span class="line">        bool compareOutside = <span class="built_in">compare</span>(<span class="built_in">left</span>-&gt;<span class="built_in">left</span>,<span class="built_in">right</span>-&gt;<span class="built_in">right</span>);</span><br><span class="line">        bool compareInside = <span class="built_in">compare</span>(<span class="built_in">left</span>-&gt;<span class="built_in">right</span>,<span class="built_in">right</span>-&gt;<span class="built_in">left</span>);</span><br><span class="line">        bool compareLast = compareOutside &amp;&amp; compareInside;</span><br><span class="line">        <span class="keyword">return</span> compareLast;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    bool isSymmetric(TreeNode* root) &#123;</span><br><span class="line">        <span class="keyword">if</span>(root == NULL)&#123;</span><br><span class="line">            <span class="keyword">return</span> true;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">compare</span>(root-&gt;<span class="built_in">left</span>,root-&gt;<span class="built_in">right</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * <span class="keyword">Definition</span> <span class="keyword">for</span> a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *<span class="built_in">left</span>;</span><br><span class="line"> *     TreeNode *<span class="built_in">right</span>;</span><br><span class="line"> *     TreeNode() : val(<span class="number">0</span>), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x) : val(x), <span class="built_in">left</span>(nullptr), <span class="built_in">right</span>(nullptr) &#123;&#125;</span><br><span class="line"> *     TreeNode(int x, TreeNode *<span class="built_in">left</span>, TreeNode *<span class="built_in">right</span>) : val(x), <span class="built_in">left</span>(<span class="built_in">left</span>), <span class="built_in">right</span>(<span class="built_in">right</span>) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    bool isSymmetric(TreeNode* root) &#123;</span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        <span class="keyword">if</span>(root == NULL)&#123;</span><br><span class="line">            <span class="keyword">return</span> true;</span><br><span class="line">        &#125;</span><br><span class="line">        que.push(root-&gt;<span class="built_in">left</span>);</span><br><span class="line">        que.push(root-&gt;<span class="built_in">right</span>);</span><br><span class="line">        while(!que.empty())&#123;</span><br><span class="line">            TreeNode* leftNode = que.front();</span><br><span class="line">            que.pop();</span><br><span class="line">            TreeNode* rightNode = que.front();</span><br><span class="line">            que.pop();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>( !leftNode &amp;&amp; !rightNode )&#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>( !leftNode |<span class="type">| !rightNode</span> |<span class="type">| (leftNode</span>-&gt;val != rightNode-&gt;val))&#123;</span><br><span class="line">                <span class="keyword">return</span> false;</span><br><span class="line">            &#125;</span><br><span class="line">            que.push(leftNode-&gt;<span class="built_in">left</span>);</span><br><span class="line">            que.push(rightNode-&gt;<span class="built_in">right</span>);</span><br><span class="line">            que.push(leftNode-&gt;<span class="built_in">right</span>);</span><br><span class="line">            que.push(rightNode-&gt;<span class="built_in">left</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+    
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+       
+    </div>
+
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%8F%E5%91%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 每周学习</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"># 动态规划</a>
+              <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag"># 二叉树</a>
+              <a href="/tags/%E5%BE%80%E6%9C%9F%E5%9B%9E%E9%A1%BE/" rel="tag"># 往期回顾</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/06/05/record06/" rel="prev" title="First learning record in June">
+                  <i class="fa fa-chevron-left"></i> First learning record in June
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MErr0r</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"\u003cyour disqus shotname>","count":false,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

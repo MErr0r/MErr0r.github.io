@@ -1,3 +1,5 @@
+https://merr0r.github.io/2022/09/22/Fist%20Study%20Record%20of%20internship/
+https://merr0r.github.io/2022/06/27/record08/
 https://merr0r.github.io/2022/06/19/record07/
 https://merr0r.github.io/2022/06/05/record06/
 https://merr0r.github.io/2022/05/30/record05/
@@ -5,4 +7,3 @@ https://merr0r.github.io/2022/05/15/record04/
 https://merr0r.github.io/2022/05/06/record03/
 https://merr0r.github.io/2022/05/01/record02/
 https://merr0r.github.io/2022/04/24/record01/
-https://merr0r.github.io/2022/04/17/hello-world/

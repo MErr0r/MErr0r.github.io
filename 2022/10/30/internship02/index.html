@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bg01.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bg01.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"merr0r.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="嵌入式学习ubuntu操作学习修改文件权限，在安装ros为了能执行rosdep update需要修改一些文件，而这些文件的权限只有“只读”，为了修改文件，比如想修改usr&#x2F;lib&#x2F;python2.7&#x2F;dist-packages&#x2F;rosdep2里的sources_list.py文件可以在根目录下执行如下指令： 1sudo chmod 777 &#x2F;usr&#x2F;lib">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Second Study Record of internship">
+<meta property="og:url" content="https://merr0r.github.io/2022/10/30/internship02/index.html">
+<meta property="og:site_name" content="MErr0rのBlog">
+<meta property="og:description" content="嵌入式学习ubuntu操作学习修改文件权限，在安装ros为了能执行rosdep update需要修改一些文件，而这些文件的权限只有“只读”，为了修改文件，比如想修改usr&#x2F;lib&#x2F;python2.7&#x2F;dist-packages&#x2F;rosdep2里的sources_list.py文件可以在根目录下执行如下指令： 1sudo chmod 777 &#x2F;usr&#x2F;lib">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/1.2_Setup_sources01.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/1.2_Setup_sources02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/1.3_02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/1.4Installation.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/1.6Dependencies.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/1.6Dependencies02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/1.6Dependencies03.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ros_download01.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ros_download02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ros_download03.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ros_download04.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ros_download05.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ros_download06.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ros_download07.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ShenGu_DownLoad01.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ShenGu_DownLoad02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ShenGu_DownLoad03.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ShenGu_DownLoad04.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ShenGu_DownLoad05.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ShenGu_DownLoad06.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ShenGu_DownLoad07.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/ShenGu_DownLoad08.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/Questions01.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2022/10/30/internship02/Questions02.jpg">
+<meta property="article:published_time" content="2022-10-30T05:13:02.961Z">
+<meta property="article:modified_time" content="2022-11-02T03:29:00.293Z">
+<meta property="article:author" content="MErr0r">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="每月学习">
+<meta property="article:tag" content="公司实习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://merr0r.github.io/2022/10/30/internship02/1.2_Setup_sources01.jpg">
+
+
+<link rel="canonical" href="https://merr0r.github.io/2022/10/30/internship02/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://merr0r.github.io/2022/10/30/internship02/","path":"2022/10/30/internship02/","title":"Second Study Record of internship"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Second Study Record of internship | MErr0rのBlog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MErr0rのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">I turn the page to drown you out</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">嵌入式学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu%E6%93%8D%E4%BD%9C%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.1.</span> <span class="nav-text">ubuntu操作学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%AD%A6%E4%B9%A0"><span class="nav-number">2.</span> <span class="nav-text">C++学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-x2F-C-%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">C&#x2F;C++知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode%E5%88%B7%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">leetcode刷题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%94%E4%BA%8C%E5%85%AC%E5%8F%B8%E5%AE%9E%E4%B9%A0"><span class="nav-number">3.</span> <span class="nav-text">研二公司实习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ros%E5%AE%89%E8%A3%852-0"><span class="nav-number">3.1.</span> <span class="nav-text">ros安装2.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%B9%A0%E5%85%AC%E5%8F%B8%E8%B0%83%E8%AF%95%E5%AE%A4%E5%A4%96%E9%87%8D%E8%BD%BD%E7%A7%BB%E5%8A%A8%E8%BD%A6%E8%B0%83%E8%AF%952-0%EF%BC%9A"><span class="nav-number">3.2.</span> <span class="nav-text">实习公司调试室外重载移动车调试2.0：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">其他问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu%E6%97%A0%E6%B3%95%E8%8E%B7%E5%BE%97%E9%94%81-x2F-var-x2F-lib-x2F-dpkg-x2F-lock-open"><span class="nav-number">4.1.</span> <span class="nav-text">ubuntu无法获得锁 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;lock - open</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="MErr0r"
+      src="/images/xhw.jpg">
+  <p class="site-author-name" itemprop="name">MErr0r</p>
+  <div class="site-description" itemprop="description">合工大研究僧</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/23497494?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;23497494?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=519779083&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;519779083&amp;website&#x3D;www.oicqzone.com" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://merr0r.github.io/2022/10/30/internship02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xhw.jpg">
+      <meta itemprop="name" content="MErr0r">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MErr0rのBlog">
+      <meta itemprop="description" content="合工大研究僧">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Second Study Record of internship | MErr0rのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Second Study Record of internship
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-30 13:13:02" itemprop="dateCreated datePublished" datetime="2022-10-30T13:13:02+08:00">2022-10-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-02 11:29:00" itemprop="dateModified" datetime="2022-11-02T11:29:00+08:00">2022-11-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/c/%E5%85%AC%E5%8F%B8%E5%AE%9E%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">公司实习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <span id="more"></span>
+<h1 id="嵌入式学习"><a href="#嵌入式学习" class="headerlink" title="嵌入式学习"></a>嵌入式学习</h1><h2 id="ubuntu操作学习"><a href="#ubuntu操作学习" class="headerlink" title="ubuntu操作学习"></a>ubuntu操作学习</h2><p>修改文件权限，在安装ros为了能执行rosdep update需要修改一些文件，而这些文件的权限只有“只读”，为了修改文件，比如想修改usr&#x2F;lib&#x2F;python2.7&#x2F;dist-packages&#x2F;rosdep2里的sources_list.py文件可以在根目录下执行如下指令：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod <span class="number">777</span> <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>dist-packages<span class="regexp">/rosdep2/</span>sources_list.py</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="C-学习"><a href="#C-学习" class="headerlink" title="C++学习"></a>C++学习</h1><h2 id="C-x2F-C-知识"><a href="#C-x2F-C-知识" class="headerlink" title="C&#x2F;C++知识"></a>C&#x2F;C++知识</h2><h2 id="leetcode刷题"><a href="#leetcode刷题" class="headerlink" title="leetcode刷题"></a>leetcode刷题</h2><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> search(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> <span class="keyword">target</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = nums.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(left &lt;= right)&#123;</span><br><span class="line">            <span class="keyword">int</span> halfIndex = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[halfIndex] &gt; <span class="keyword">target</span>)&#123;</span><br><span class="line">                right = halfIndex - <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="function"><span class="keyword">else</span> <span class="title">if</span><span class="params">(nums[halfIndex] &lt; <span class="keyword">target</span>)</span></span>&#123;</span><br><span class="line">                left = halfIndex + <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> halfIndex;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="研二公司实习"><a href="#研二公司实习" class="headerlink" title="研二公司实习"></a>研二公司实习</h1><h2 id="ros安装2-0"><a href="#ros安装2-0" class="headerlink" title="ros安装2.0"></a>ros安装2.0</h2><p>工控机系统：Ubuntu 18.04<br>安装时间：2022.10.31<br>如果官网与本文代码有区别，请以官网为主。<br>打开两个网站：<br>英文ros官网：<a target="_blank" rel="noopener" href="http://wiki.ros.org/melodic/Installation/Ubuntu">http://wiki.ros.org/melodic/Installation/Ubuntu</a><br>中文ros官网：<a target="_blank" rel="noopener" href="http://wiki.ros.org/cn/melodic/Installation/Ubuntu">http://wiki.ros.org/cn/melodic/Installation/Ubuntu</a><br>第一步：<br>打开英文ros官网《1.2 Setup your sources.list》的Mirrors，设置我们所需要的镜像源，最好是选择清华源：</p>
+<img src="/2022/10/30/internship02/1.2_Setup_sources01.jpg" class="" title="这是一张图片">
+<img src="/2022/10/30/internship02/1.2_Setup_sources02.jpg" class="" title="这是一张图片">
+<p>在ros终端输入：</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. <span class="string">/etc/lsb-release</span> &amp;&amp; <span class="keyword">echo</span> <span class="string">&quot;deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot;</span> &gt; <span class="string">/etc/apt/sources.list.d/ros-latest.list</span>&#x27;</span><br></pre></td></tr></table></figure>
+<p>第二步：<br>打开中文ros官网《1.3 设置密钥》</p>
+<img src="/2022/10/30/internship02/1.3_02.jpg" class="" title="这是一张图片">
+<p>在ros终端输入：</p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sudo</span> <span class="string">apt-key</span> <span class="string">adv</span> <span class="built_in">--keyserver</span> <span class="string">&#x27;hkp://keyserver.ubuntu.com:80&#x27;</span> <span class="built_in">--recv-key</span> <span class="string">C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</span></span><br></pre></td></tr></table></figure>
+<p>第三步：<br>打开英文ros官网《1.4 Installation》，依次在ros端执行：</p>
+<img src="/2022/10/30/internship02/1.4Installation.jpg" class="" title="这是一张图片">
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo apt update</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt <span class="keyword">install</span> ros-melodic-desktop</span><br></pre></td></tr></table></figure>
+<p>因为对于公司产品Desktop Install已经够用，如果安装Desktop-Full Install比较耗时间。<br>第四步：<br>打开英文ros官网《1.6 Dependencies for building packages》，依次在ros端执行：</p>
+<img src="/2022/10/30/internship02/1.6Dependencies.jpg" class="" title="这是一张图片">
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install <span class="keyword">python</span>-rosdep <span class="keyword">python</span>-rosinstall <span class="keyword">python</span>-rosinstall-generator <span class="keyword">python</span>-wstool build-essential</span><br></pre></td></tr></table></figure>
+<p>第五步：<br>设置环境，执行以下指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;source /opt/ros/melodic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<img src="/2022/10/30/internship02/1.6Dependencies02.jpg" class="" title="这是一张图片">
+<p>第六步：<br>初始化 rosdep，这是关键地方，这地方会疯狂报错，主要还是网络延迟问题。首先执行第一条</p>
+<img src="/2022/10/30/internship02/1.6Dependencies03.jpg" class="" title="这是一张图片">
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rosdep <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
+<p>如果不成功很正常，首先执行以下指令</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/etc/</span>hosts</span><br></pre></td></tr></table></figure>
+<p>在在文件末尾添加</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">151.101.84.133</span>  raw.githubusercontent.com</span><br></pre></td></tr></table></figure>
+<p>然后反复使用sudo rosdep init，就能执行成功。下一句</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rosdep update</span></span><br></pre></td></tr></table></figure>
+<p>如果没执行成功很正常，需要去其他地方修改文件。首先进入&#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;dist-packages&#x2F;rosdep2里的sources_list.py文件，添加</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url</span>=<span class="string">&quot;https://ghproxy.com/&quot;</span>+url</span><br></pre></td></tr></table></figure>
+<img src="/2022/10/30/internship02/ros_download01.jpg" class="" title="这是一张图片">
+<p>如果文件权限是只读，修改权限方法看本文的嵌入式学习的ubuntu操作学习，然后在第二处（64行）添加</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//g</span>hproxy.com/</span><br></pre></td></tr></table></figure>
+<img src="/2022/10/30/internship02/ros_download02.jpg" class="" title="这是一张图片">
+<p>在</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>dist-packages<span class="regexp">/rosdep2/g</span>bpdistro_support.py <span class="number">35</span>行</span><br><span class="line"><span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>dist-packages<span class="regexp">/rosdep2/</span>rep3.py	<span class="number">36</span>行</span><br><span class="line"><span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>dist-packages<span class="regexp">/rosdistro/m</span>anifest_provider/github.py <span class="number">68</span>行 <span class="number">119</span>行</span><br><span class="line"><span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>dist-packages<span class="regexp">/rosdistro/</span>__init__.py的DEFAULT_INDEX_URL</span><br></pre></td></tr></table></figure>
+<p>也进行如上替换</p>
+<img src="/2022/10/30/internship02/ros_download03.jpg" class="" title="这是一张图片">
+<img src="/2022/10/30/internship02/ros_download04.jpg" class="" title="这是一张图片">
+<img src="/2022/10/30/internship02/ros_download05.jpg" class="" title="这是一张图片">
+<img src="/2022/10/30/internship02/ros_download06.jpg" class="" title="这是一张图片">
+<img src="/2022/10/30/internship02/ros_download07.jpg" class="" title="这是一张图片">
+
+
+<h2 id="实习公司调试室外重载移动车调试2-0："><a href="#实习公司调试室外重载移动车调试2-0：" class="headerlink" title="实习公司调试室外重载移动车调试2.0："></a>实习公司调试室外重载移动车调试2.0：</h2><p>日期：10.31<br>基础软件文件下载：<br>Step1：<br>在Windows界面打开gitee网址：<a target="_blank" rel="noopener" href="https://gitee.com/dashboard%EF%BC%88%E4%B9%9F%E8%83%BD%E5%9C%A8Ubuntu%E5%86%85%E6%89%93%E5%BC%80%EF%BC%89%EF%BC%8C%E6%90%9C%E7%B4%A2rocr6">https://gitee.com/dashboard（也能在Ubuntu内打开），搜索rocr6</a></p>
+<img src="/2022/10/30/internship02/ShenGu_DownLoad01.jpg" class="" title="这是一张图片">
+<p>选择第一个</p>
+<img src="/2022/10/30/internship02/ShenGu_DownLoad02.jpg" class="" title="这是一张图片">
+<p>点进去，再点击zhwl_1981</p>
+<img src="/2022/10/30/internship02/ShenGu_DownLoad03.jpg" class="" title="这是一张图片">
+<p>点击complex_robot</p>
+<img src="/2022/10/30/internship02/ShenGu_DownLoad04.jpg" class="" title="这是一张图片">
+<p>Step2：<br>打开ubuntu18.04，在根目录打开终端。</p>
+<img src="/2022/10/30/internship02/ShenGu_DownLoad05.jpg" class="" title="这是一张图片">
+<p>依次输入Windows界面的gitee里的代码：</p>
+<img src="/2022/10/30/internship02/ShenGu_DownLoad06.jpg" class="" title="这是一张图片">
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> https://gitee.com/zhwl_1981/complex_robot.git</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> complex_robot</span></span><br></pre></td></tr></table></figure>
+<p>Step3：<br>在complex_robot文件下的终端依次输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./installRobot zeus_s2_rocr6_g3p.rosinstall</span><br><span class="line">./installRobot location_navigation.rosinstall</span><br></pre></td></tr></table></figure>
+<p>在输入.&#x2F;installRobot zeus_s2_rocr6_g3p.rosinstall后会出现一些报错：</p>
+<img src="/2022/10/30/internship02/ShenGu_DownLoad07.jpg" class="" title="这是一张图片">
+<p>因为缺少工程编译所需的依赖包，解决办法其说明缺少依赖包ecl-threads，这个时候把提示里面的ecl_threadsConfig.cmake后面的Config.cmake删掉，即为缺少的包，并把其中的下划线_用连字符-替换，替换后就变成ecl-threads,然后在前面加上ros-melodic即可。这里的melodic是我安装ROS的版本。所以执行代码：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install ros-melodic-ecl-threads</span><br></pre></td></tr></table></figure>
+<img src="/2022/10/30/internship02/ShenGu_DownLoad08.jpg" class="" title="这是一张图片">
+<p>跟上述同样的道理，缺少tf2_geometry_msgs的包</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install ros-melodic-tf2_geometry_msgs</span><br></pre></td></tr></table></figure>
+<p>这样.&#x2F;installRobot zeus_s2_rocr6_g3p.rosinstall就能完美执行了。</p>
+<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h1><h2 id="ubuntu无法获得锁-x2F-var-x2F-lib-x2F-dpkg-x2F-lock-open"><a href="#ubuntu无法获得锁-x2F-var-x2F-lib-x2F-dpkg-x2F-lock-open" class="headerlink" title="ubuntu无法获得锁 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;lock - open"></a>ubuntu无法获得锁 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;lock - open</h2><p>运行虚拟机的时候执行sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential的时候报错了。</p>
+<img src="/2022/10/30/internship02/Questions01.jpg" class="" title="这是一张图片">
+<p>解决方法：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm <span class="regexp">/var/</span>cache<span class="regexp">/apt/</span>archives/lock</span><br><span class="line">sudo rm <span class="regexp">/var/</span>lib<span class="regexp">/dpkg/</span>lock</span><br></pre></td></tr></table></figure>
+<img src="/2022/10/30/internship02/Questions02.jpg" class="" title="这是一张图片">
+
+    </div>
+
+    
+    
+    
+    
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+       
+    </div>
+
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E6%AF%8F%E6%9C%88%E5%AD%A6%E4%B9%A0/" rel="tag"># 每月学习</a>
+              <a href="/tags/%E5%85%AC%E5%8F%B8%E5%AE%9E%E4%B9%A0/" rel="tag"># 公司实习</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/09/22/internship01/" rel="prev" title="Fist Study Record of internship">
+                  <i class="fa fa-chevron-left"></i> Fist Study Record of internship
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MErr0r</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"\u003cyour disqus shotname>","count":false,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

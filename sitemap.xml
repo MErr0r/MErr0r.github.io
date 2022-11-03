@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://merr0r.github.io/2022/10/30/internship02/</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://merr0r.github.io/2022/09/22/internship01/</loc>
     
     <lastmod>2022-11-03</lastmod>
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://merr0r.github.io/2022/10/30/internship02/</loc>
+    <loc>https://merr0r.github.io/2022/06/19/record07/</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -23,15 +32,6 @@
     <loc>https://merr0r.github.io/2022/06/27/record08/</loc>
     
     <lastmod>2022-07-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merr0r.github.io/2022/06/19/record07/</loc>
-    
-    <lastmod>2022-06-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

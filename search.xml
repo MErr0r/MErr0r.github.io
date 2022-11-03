@@ -80,8 +80,8 @@
   <entry>
     <title>Fist Study Record of internship</title>
     <url>/2022/09/22/internship01/</url>
-    <content><![CDATA[<span id="more"></span>
-<p>2022-09-22 ~ 2022-10-30</p>
+    <content><![CDATA[<p>2022-09-22 ~ 2022-10-30</p>
+<span id="more"></span>
 <h1 id="嵌入式学习"><a href="#嵌入式学习" class="headerlink" title="嵌入式学习"></a>嵌入式学习</h1><h2 id="GPIO以及led原理图演变"><a href="#GPIO以及led原理图演变" class="headerlink" title="GPIO以及led原理图演变"></a>GPIO以及led原理图演变</h2><p>GPIO&#x3D;General Purpose Input Output，通用的输入输出接口，有时候称为“IO口”。</p>
 <img src="/2022/09/22/internship01/led_01.jpg" class="" title="这是一张图片">
 <p>最原始的led图，但是电流过大可能会烧坏二极管。</p>
@@ -742,7 +742,8 @@
   <entry>
     <title>Second Study Record of internship</title>
     <url>/2022/10/30/internship02/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>2022-10-30 ~ 2022-10-30</p>
+<span id="more"></span>
 <h1 id="嵌入式学习"><a href="#嵌入式学习" class="headerlink" title="嵌入式学习"></a>嵌入式学习</h1><h2 id="ubuntu操作系统学习"><a href="#ubuntu操作系统学习" class="headerlink" title="ubuntu操作系统学习"></a>ubuntu操作系统学习</h2><p>修改文件权限，在安装ros为了能执行rosdep update需要修改一些文件，而这些文件的权限只有“只读”，为了修改文件，比如想修改usr&#x2F;lib&#x2F;python2.7&#x2F;dist-packages&#x2F;rosdep2里的sources_list.py文件可以在根目录下执行如下指令：</p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">sudo chmod <span class="number">777</span> <span class="regexp">/usr/</span>lib<span class="regexp">/python2.7/</span>dist-packages<span class="regexp">/rosdep2/</span>sources_list.py</span><br></pre></td></tr></table></figure>
 <p>根目录下的次目录：&#x2F;dev &#x2F;mnt<br>&#x2F;dev是一个关于设备接口的目录。在Linux系统上，任何装置与接口设备都是以档案的形态存在于dev目录当中。<br>&#x2F;mnt是一个关于挂载的目录。如果要暂时挂载某些额外的装置，一般在这个目录下操作。</p>
@@ -830,7 +831,9 @@
 <p>Step3：输入指令，查看串口信息（该指令在99-usb-to-uart.rules第一行就有，复制使用即可）</p>
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">udevadm <span class="built_in">info</span> --attribute-walk <span class="attribute">--name</span>=/dev/ttyUSB6</span><br></pre></td></tr></table></figure>
 <p>如果串口是其他名字，则指令末尾ttyUSB6改成对应的串口名字。得到的反馈如下图所示。查看串口信息在第三个looking at下的这句话：KERNELS&#x3D;&#x3D;”1-2.2:1.0” 复制到99-usb-to-uart.rules，保存退出。</p>
-<p>Step4：重新插拔机械臂插口，<br>1.输入：ls -l &#x2F;dev&#x2F;|grep ttyUSB指令，查看是USB几，下面以ttyUSB1为例<br>2.根据第一步查看到的usb1，使用命令：udevadm info –attribute-walk –name&#x3D;&#x2F;dev&#x2F;ttyUSB1    查看串口信息<br>在第三个  looking at   下的这句话：KERNELS&#x3D;&#x3D;”1-2.2:1.0   ####KERNELS&#x3D;&#x3D;”1-2.2:1.0”这句话添加到步骤4中<br>3.cd &#x2F;etc&#x2F;udev&#x2F;rules.d目录下输入命令：sudo touch myusb.rules,然后就添加了一个脚本<br>4.对脚本进行编辑，使用命令：sudo gedit  myusb.rules<br>在脚本里添加：KERNELS&#x3D;&#x3D;”1-2.2:1.0”,MODE:&#x3D;”0777”, GROUP:&#x3D;”dialout”,  SYMLINK+&#x3D;”base”       然后保存<br>重新插拔一下。<br>5.重新输入：ls -l &#x2F;dev&#x2F;|grep ttyUSB指令<br>看到：lrwxrwxrwx  1 root   root            8 03:01 base-&gt; ttyUSB1<br>即为成功</p>
+<p>Step4：重新插拔机械臂插口，执行指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /dev</span><br><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+<p>查看是否有&#x2F;dev&#x2F;ROCR6<br>1.输入：ls -l &#x2F;dev&#x2F;|grep ttyUSB指令，查看是USB几，下面以ttyUSB1为例<br>2.根据第一步查看到的usb1，使用命令：udevadm info –attribute-walk –name&#x3D;&#x2F;dev&#x2F;ttyUSB1    查看串口信息<br>在第三个  looking at   下的这句话：KERNELS&#x3D;&#x3D;”1-2.2:1.0   ####KERNELS&#x3D;&#x3D;”1-2.2:1.0”这句话添加到步骤4中<br>3.cd &#x2F;etc&#x2F;udev&#x2F;rules.d目录下输入命令：sudo touch myusb.rules,然后就添加了一个脚本<br>4.对脚本进行编辑，使用命令：sudo gedit  myusb.rules<br>在脚本里添加：KERNELS&#x3D;&#x3D;”1-2.2:1.0”,MODE:&#x3D;”0777”, GROUP:&#x3D;”dialout”,  SYMLINK+&#x3D;”base”       然后保存<br>重新插拔一下。<br>5.重新输入：ls -l &#x2F;dev&#x2F;|grep ttyUSB指令<br>看到：lrwxrwxrwx  1 root   root            8 03:01 base-&gt; ttyUSB1<br>即为成功</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -848,7 +851,6 @@
       </categories>
       <tags>
         <tag>leetcode</tag>
-        <tag>每月学习</tag>
         <tag>公司实习</tag>
       </tags>
   </entry>

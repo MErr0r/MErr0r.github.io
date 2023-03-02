@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bg01.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bg01.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"merr0r.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="2023-1-31 ~ 2023-02-28">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fourth Study Record of internship">
+<meta property="og:url" content="https://merr0r.github.io/2023/01/02/internship04/index.html">
+<meta property="og:site_name" content="MErr0rのBlog">
+<meta property="og:description" content="2023-1-31 ~ 2023-02-28">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode206.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode24.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode19.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode0207.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode142.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode242.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode349.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode202.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode1.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode454.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode383.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode344.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode541.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCodeJianZhiOffer05.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode151.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/DH01.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/DH02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/DH03.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/DH04.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/DH05.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/DH06.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/rosInstall.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/RosGazebo01.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/RosGazebo02.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/RosGazebo03.jpg">
+<meta property="og:image" content="https://merr0r.github.io/2023/01/02/internship04/RosGazebo04.jpg">
+<meta property="article:published_time" content="2023-01-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-02T12:51:33.657Z">
+<meta property="article:author" content="MErr0r">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="公司实习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://merr0r.github.io/2023/01/02/internship04/leetCode206.jpg">
+
+
+<link rel="canonical" href="https://merr0r.github.io/2023/01/02/internship04/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://merr0r.github.io/2023/01/02/internship04/","path":"2023/01/02/internship04/","title":"fourth Study Record of internship"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>fourth Study Record of internship | MErr0rのBlog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MErr0rのBlog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">I turn the page to drown you out</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">嵌入式学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu%E6%93%8D%E4%BD%9C%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.1.</span> <span class="nav-text">ubuntu操作学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#leetCode%E5%88%B7%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">leetCode刷题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="nav-number">2.1.</span> <span class="nav-text">206. 反转链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9"><span class="nav-number">2.2.</span> <span class="nav-text">24.两两交换链表中的节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9"><span class="nav-number">2.3.</span> <span class="nav-text">19.删除链表的倒数第N个节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#02-07-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4"><span class="nav-number">2.4.</span> <span class="nav-text">02.07. 链表相交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II"><span class="nav-number">2.5.</span> <span class="nav-text">142.环形链表II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D"><span class="nav-number">2.6.</span> <span class="nav-text">242.有效的字母异位词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86"><span class="nav-number">2.7.</span> <span class="nav-text">349. 两个数组的交集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#202-%E5%BF%AB%E4%B9%90%E6%95%B0"><span class="nav-number">2.8.</span> <span class="nav-text">202. 快乐数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="nav-number">2.9.</span> <span class="nav-text">1. 两数之和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0-II"><span class="nav-number">2.10.</span> <span class="nav-text">454.四数相加 II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#383-%E8%B5%8E%E9%87%91%E4%BF%A1"><span class="nav-number">2.11.</span> <span class="nav-text">383. 赎金信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#344-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.12.</span> <span class="nav-text">344. 反转字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#541-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2-II"><span class="nav-number">2.13.</span> <span class="nav-text">541. 反转字符串 II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%91%E6%8C%87-Offer-05-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC"><span class="nav-number">2.14.</span> <span class="nav-text">剑指 Offer 05. 替换空格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#151-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D"><span class="nav-number">2.15.</span> <span class="nav-text">151. 反转字符串中的单词</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%94%E4%BA%8C%E5%85%AC%E5%8F%B8%E5%AE%9E%E4%B9%A0"><span class="nav-number">3.</span> <span class="nav-text">研二公司实习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DH%E5%8F%82%E6%95%B0%E4%B8%8Em%E4%BB%A3%E7%A0%81%E4%BB%BF%E7%9C%9F"><span class="nav-number">3.1.</span> <span class="nav-text">DH参数与m代码仿真</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E6%AF%8F%E4%B8%AA%E8%BF%9E%E6%9D%86%E7%9A%84%E5%9B%BA%E8%BF%9E%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">3.1.1.</span> <span class="nav-text">确定每个连杆的固连坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">3.1.2.</span> <span class="nav-text">自定义一个世界坐标系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E6%AF%8F%E4%B8%AA%E5%8F%82%E6%95%B0"><span class="nav-number">3.1.3.</span> <span class="nav-text">确定每个参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E7%89%88%E8%A3%85ROS"><span class="nav-number">3.2.</span> <span class="nav-text">进阶版装ROS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85ubuntu%E7%B3%BB%E7%BB%9F%E5%90%8E%E9%9C%80%E6%89%A7%E8%A1%8C%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">3.3.</span> <span class="nav-text">刚在虚拟机安装ubuntu系统后需执行的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8EGazebo%E5%AE%89%E8%A3%85"><span class="nav-number">3.4.</span> <span class="nav-text">关于Gazebo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ROS%E4%B8%AD%E4%BD%BF%E7%94%A8gazebo-ros%E7%9A%84spawn-model%E6%97%B6%EF%BC%8C%E6%98%BE%E7%A4%BA-spawn-model-4-process-has-died"><span class="nav-number">3.5.</span> <span class="nav-text">ROS中使用gazebo_ros的spawn_model时，显示[spawn_model-4] process has died</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="MErr0r"
+      src="/images/xhw.jpg">
+  <p class="site-author-name" itemprop="name">MErr0r</p>
+  <div class="site-description" itemprop="description">合工大研究僧</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/23497494?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;23497494?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=519779083&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;519779083&amp;website&#x3D;www.oicqzone.com" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://merr0r.github.io/2023/01/02/internship04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xhw.jpg">
+      <meta itemprop="name" content="MErr0r">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MErr0rのBlog">
+      <meta itemprop="description" content="合工大研究僧">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="fourth Study Record of internship | MErr0rのBlog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          fourth Study Record of internship
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-01-02 00:00:00" itemprop="dateCreated datePublished" datetime="2023-01-02T00:00:00+08:00">2023-01-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-02 20:51:33" itemprop="dateModified" datetime="2023-03-02T20:51:33+08:00">2023-03-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>2023-1-31 ~ 2023-02-28</p>
+<span id="more"></span>
+<h1 id="嵌入式学习"><a href="#嵌入式学习" class="headerlink" title="嵌入式学习"></a>嵌入式学习</h1><h2 id="ubuntu操作学习"><a href="#ubuntu操作学习" class="headerlink" title="ubuntu操作学习"></a>ubuntu操作学习</h2><p>文件压缩zip格式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">zip</span> -vr 文件名字.<span class="built_in">zip</span> 需要压缩的文件</span><br></pre></td></tr></table></figure>
+<p>linux通过指令断开与某个wifi的连接</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">nmcli</span> c del <span class="number">72</span>ffd5f4-<span class="number">71</span>f8-<span class="number">0001</span>-b434-<span class="number">6122908</span>cfd4e</span><br></pre></td></tr></table></figure>
+<p>del 后边是UUID号码</p>
+<h1 id="leetCode刷题"><a href="#leetCode刷题" class="headerlink" title="leetCode刷题"></a>leetCode刷题</h1><h2 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a>206. 反转链表</h2><p>给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。</p>
+<img src="/2023/01/02/internship04/leetCode206.jpg" class="" title="这是一张图片">
+<figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * <span class="type">Definition</span> <span class="keyword">for</span> singly-linked <span class="built_in">list</span>.</span><br><span class="line"> * <span class="keyword">struct</span> <span class="type">ListNode</span> &#123;</span><br><span class="line"> *     <span class="built_in">int</span> <span class="keyword">val</span>;</span><br><span class="line"> *     <span class="type">ListNode</span> *next;</span><br><span class="line"> *     <span class="type">ListNode</span><span class="literal">()</span> : <span class="keyword">val</span>(<span class="number">0</span>), next(nullptr) &#123;&#125;</span><br><span class="line"> *     <span class="type">ListNode</span>(<span class="built_in">int</span> x) : <span class="keyword">val</span>(x), next(nullptr) &#123;&#125;</span><br><span class="line"> *     <span class="type">ListNode</span>(<span class="built_in">int</span> x, <span class="type">ListNode</span> *next) : <span class="keyword">val</span>(x), next(next) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">class</span> <span class="type">Solution</span> &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="type">ListNode</span>* reverseList(<span class="type">ListNode</span>* head) &#123;</span><br><span class="line">        vector&lt;<span class="built_in">int</span>&gt; tmp(<span class="number">5000</span>,<span class="number">0</span>);</span><br><span class="line">        <span class="built_in">int</span> nums = -<span class="number">1</span>;</span><br><span class="line">        <span class="type">ListNode</span>* cur = <span class="keyword">new</span> <span class="type">ListNode</span>(-<span class="number">1</span>);</span><br><span class="line">        cur -&gt; next = head;</span><br><span class="line">        <span class="keyword">while</span>(cur -&gt; next)&#123;</span><br><span class="line">            nums++;</span><br><span class="line">            tmp[nums] = cur-&gt; next-&gt;<span class="keyword">val</span>;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(nums &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            return nullptr;</span><br><span class="line">        &#125;</span><br><span class="line">        nums = nums -<span class="number">1</span>;</span><br><span class="line">        head = cur;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = nums;i &gt;= <span class="number">0</span>;i--)&#123;</span><br><span class="line">            <span class="type">ListNode</span>* mcur = <span class="keyword">new</span> <span class="type">ListNode</span>(tmp[i]);</span><br><span class="line">            cur-&gt;next = mcur;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24.两两交换链表中的节点"></a>24.两两交换链表中的节点</h2><p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
+<img src="/2023/01/02/internship04/leetCode24.jpg" class="" title="这是一张图片">
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    ListNode* swapPairs(ListNode* head) &#123;</span><br><span class="line">        ListNode* cur = head;</span><br><span class="line">        ListNode* tmp = NULL;</span><br><span class="line">        ListNode* pre = NULL;</span><br><span class="line">        ListNode* tmp2 = NULL;</span><br><span class="line">        ListNode* <span class="keyword">real</span> = new ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode* realtmp = <span class="keyword">real</span>;</span><br><span class="line">        int i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(cur != NULL)&#123;</span><br><span class="line">            <span class="function"><span class="title">tmp</span> = cur-&gt;</span>next;</span><br><span class="line">            <span class="function"><span class="title">cur</span>-&gt;</span>next = pre;</span><br><span class="line">            pre = cur;</span><br><span class="line">            cur = tmp;</span><br><span class="line">            i += <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(i == <span class="number">1</span> &amp;&amp; cur == NULL)&#123;</span><br><span class="line">                <span class="function"><span class="title">realtmp</span>-&gt;</span>next = pre;</span><br><span class="line">                <span class="function"><span class="title">return</span> <span class="keyword">real</span>-&gt;</span>next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(i == <span class="number">2</span>)&#123;</span><br><span class="line">                <span class="function"><span class="title">realtmp</span>-&gt;</span>next = pre;</span><br><span class="line">                <span class="function"><span class="title">realtmp</span> = realtmp-&gt;</span><span class="function"><span class="title">next</span>-&gt;</span>next;</span><br><span class="line">                i = <span class="number">0</span>;</span><br><span class="line">                pre = NULL;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="title">return</span> <span class="keyword">real</span>-&gt;</span>next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="19-删除链表的倒数第N个节点"><a href="#19-删除链表的倒数第N个节点" class="headerlink" title="19.删除链表的倒数第N个节点"></a>19.删除链表的倒数第N个节点</h2><p>给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。</p>
+<img src="/2023/01/02/internship04/leetCode19.jpg" class="" title="这是一张图片">
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ListNode* removeNthFromEnd(ListNode* head, <span class="keyword">int</span> n) &#123;</span><br><span class="line">        ListNode* cur = head;</span><br><span class="line">        ListNode* tmp;</span><br><span class="line">        ListNode* pre = <span class="keyword">NULL</span>;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(cur)&#123;</span><br><span class="line">            i++;</span><br><span class="line">            tmp = cur-&gt;<span class="keyword">next</span>;</span><br><span class="line">            cur-&gt;<span class="keyword">next</span> = pre;</span><br><span class="line">            pre = cur;</span><br><span class="line">            cur = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">            cur = pre-&gt;<span class="keyword">next</span>;</span><br><span class="line">            pre = <span class="keyword">NULL</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cur = pre;</span><br><span class="line">            n = n - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(--n)&#123;</span><br><span class="line">                <span class="keyword">if</span>(cur == <span class="keyword">NULL</span>)&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">NULL</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                cur = cur-&gt;<span class="keyword">next</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            cur-&gt;<span class="keyword">next</span> = cur-&gt;<span class="keyword">next</span>-&gt;<span class="keyword">next</span>;</span><br><span class="line">            cur = pre;</span><br><span class="line">            pre = <span class="keyword">NULL</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(cur)&#123;</span><br><span class="line">            tmp = cur-&gt;<span class="keyword">next</span>;</span><br><span class="line">            cur-&gt;<span class="keyword">next</span> = pre;</span><br><span class="line">            pre = cur;</span><br><span class="line">            cur = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pre;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="02-07-链表相交"><a href="#02-07-链表相交" class="headerlink" title="02.07. 链表相交"></a>02.07. 链表相交</h2><p>给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。</p>
+<img src="/2023/01/02/internship04/leetCode0207.jpg" class="" title="这是一张图片">
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) &#123;</span><br><span class="line">        ListNode* cur1 = headA;</span><br><span class="line">        <span class="keyword">int</span> numA = <span class="number">0</span>;</span><br><span class="line">        ListNode* cur2 = headB;</span><br><span class="line">        <span class="keyword">int</span> numB = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(cur1)&#123;</span><br><span class="line">            numA++;</span><br><span class="line">            cur1= cur1-&gt;<span class="keyword">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(cur2)&#123;</span><br><span class="line">            numB++;</span><br><span class="line">            cur2= cur2-&gt;<span class="keyword">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cur1 = headA;</span><br><span class="line">        cur2 = headB;</span><br><span class="line">        <span class="keyword">if</span>(numA &gt; numB)&#123;</span><br><span class="line">            numA = numA-numB;</span><br><span class="line">            <span class="keyword">while</span>(numA--)&#123;</span><br><span class="line">                cur1 = cur1-&gt;<span class="keyword">next</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            numB = numB-numA;</span><br><span class="line">            <span class="keyword">while</span>(numB--)&#123;</span><br><span class="line">                cur2 = cur2-&gt;<span class="keyword">next</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode* tmp =<span class="keyword">NULL</span>;</span><br><span class="line">        <span class="keyword">while</span>(cur1)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cur1 == cur2 &amp;&amp; tmp == <span class="keyword">NULL</span>)&#123;</span><br><span class="line">                tmp = cur1;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(cur1 != cur2)&#123;</span><br><span class="line">                tmp = <span class="keyword">NULL</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            cur1 = cur1-&gt;<span class="keyword">next</span>;</span><br><span class="line">            cur2 = cur2-&gt;<span class="keyword">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="142-环形链表II"><a href="#142-环形链表II" class="headerlink" title="142.环形链表II"></a>142.环形链表II</h2><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
+<img src="/2023/01/02/internship04/leetCode142.jpg" class="" title="这是一张图片">
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ListNode *detectCycle(ListNode *head) &#123;</span><br><span class="line">        ListNode* virtualNode = <span class="keyword">new</span> ListNode(-<span class="number">1</span>);</span><br><span class="line">        virtualNode-&gt;<span class="keyword">next</span> = head;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">NULL</span> || head-&gt;<span class="keyword">next</span> == <span class="keyword">NULL</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">NULL</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode* slowIndex = virtualNode;</span><br><span class="line">        ListNode* fastIndex = virtualNode;</span><br><span class="line">        <span class="keyword">while</span>((slowIndex != fastIndex &amp;&amp; fastIndex != <span class="keyword">NULL</span>)|| (slowIndex == fastIndex &amp;&amp; fastIndex ==virtualNode))&#123;</span><br><span class="line">            slowIndex = slowIndex-&gt;<span class="keyword">next</span>;</span><br><span class="line">            fastIndex = fastIndex-&gt;<span class="keyword">next</span>;</span><br><span class="line">            <span class="keyword">if</span>(fastIndex != <span class="keyword">NULL</span>)&#123;</span><br><span class="line">                fastIndex = fastIndex-&gt;<span class="keyword">next</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">NULL</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(fastIndex ==<span class="keyword">NULL</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">NULL</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        fastIndex = virtualNode;</span><br><span class="line">        <span class="keyword">while</span>(slowIndex != fastIndex)&#123;</span><br><span class="line">            slowIndex = slowIndex-&gt;<span class="keyword">next</span>;</span><br><span class="line">            fastIndex = fastIndex-&gt;<span class="keyword">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fastIndex;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242.有效的字母异位词"></a>242.有效的字母异位词</h2><p>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。</p>
+<img src="/2023/01/02/internship04/leetCode242.jpg" class="" title="这是一张图片">
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">bool</span> <span class="title">isAnagram</span>(<span class="params"><span class="built_in">string</span> s, <span class="built_in">string</span> t</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">int</span> hash1[<span class="number">26</span>];</span><br><span class="line">        <span class="built_in">int</span> hash2[<span class="number">26</span>];</span><br><span class="line">        memset(hash1,<span class="number">0</span>,<span class="keyword">sizeof</span>(hash1));</span><br><span class="line">        memset(hash2,<span class="number">0</span>,<span class="keyword">sizeof</span>(hash2));</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i &lt; s.length();i++)&#123;</span><br><span class="line">            hash1[s[i]-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i &lt; t.length();i++)&#123;</span><br><span class="line">            hash2[t[i]-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i &lt; <span class="number">26</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(hash1[i] != hash2[i])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a>349. 两个数组的交集</h2><p>给定两个数组，编写一个函数来计算它们的交集。</p>
+<img src="/2023/01/02/internship04/leetCode349.jpg" class="" title="这是一张图片">
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">intersection</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> hash1[<span class="number">1001</span>] =&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="type">int</span> hash2[<span class="number">1001</span>] =&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums1.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            hash1[nums1[i]]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums2.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            hash2[nums2[i]]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">ret</span><span class="params">(min(nums1.size(),nums2.size()),<span class="number">-1</span>)</span></span>;</span><br><span class="line">        <span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="built_in">sizeof</span>(hash1) / <span class="built_in">sizeof</span>(hash1[<span class="number">0</span>]);i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(hash1[i] != <span class="number">0</span> &amp;&amp; hash2[i] != <span class="number">0</span>)&#123;</span><br><span class="line">                ret[j] = i;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(j = ret.<span class="built_in">size</span>() - <span class="number">1</span>;j &gt;= <span class="number">0</span>;j--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(ret[j] == <span class="number">-1</span>)&#123;</span><br><span class="line">                ret.<span class="built_in">pop_back</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="202-快乐数"><a href="#202-快乐数" class="headerlink" title="202. 快乐数"></a>202. 快乐数</h2><p>编写一个算法来判断一个数 n 是不是快乐数。<br>「快乐数」 定义为：<br>对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。<br>然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。<br>如果这个过程 结果为 1，那么这个数就是快乐数。<br>如果 n 是 快乐数 就返回 true ；不是，则返回 false </p>
+<img src="/2023/01/02/internship04/leetCode202.jpg" class="" title="这是一张图片">
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">int</span> getSum(<span class="built_in">int</span> n)&#123;</span><br><span class="line">        <span class="built_in">int</span> <span class="keyword">sum</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n)&#123;</span><br><span class="line">            <span class="keyword">sum</span> += (n % <span class="number">10</span>) * (n % <span class="number">10</span>);</span><br><span class="line">            n = n / <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">sum</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    bool isHappy(<span class="built_in">int</span> n) &#123;</span><br><span class="line">        unordered_set&lt;<span class="built_in">int</span>&gt; s;</span><br><span class="line">        <span class="built_in">int</span> <span class="keyword">sum</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n != <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">sum</span> = getSum(n);</span><br><span class="line">            <span class="keyword">if</span>(s.<span class="keyword">count</span>(<span class="keyword">sum</span>) != <span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            s.insert(<span class="keyword">sum</span>);</span><br><span class="line">            n = <span class="keyword">sum</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a>1. 两数之和</h2><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。<br>你可以按任意顺序返回答案。</p>
+<img src="/2023/01/02/internship04/leetCode1.jpg" class="" title="这是一张图片">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; s;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; nums.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            <span class="keyword">auto</span> iter = s.<span class="built_in">find</span>(target - nums[i]); </span><br><span class="line">            <span class="keyword">if</span>(iter != s.<span class="built_in">end</span>())&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;i,iter-&gt;second&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            s.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;<span class="type">int</span>,<span class="type">int</span>&gt;(nums[i],i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="454-四数相加-II"><a href="#454-四数相加-II" class="headerlink" title="454.四数相加 II"></a>454.四数相加 II</h2><p>给你四个整数数组 nums1、nums2、nums3 和 nums4 ，数组长度都是 n ，请你计算有多少个元组 (i, j, k, l) 能满足：<br>0 &lt;&#x3D; i, j, k, l &lt; n<br>nums1[i] + nums2[j] + nums3[k] + nums4[l] &#x3D;&#x3D; 0</p>
+<img src="/2023/01/02/internship04/leetCode454.jpg" class="" title="这是一张图片">
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">fourSumCount</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums1, vector&lt;<span class="type">int</span>&gt;&amp; nums2, vector&lt;<span class="type">int</span>&gt;&amp; nums3, vector&lt;<span class="type">int</span>&gt;&amp; nums4)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; map;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i :nums1)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j : nums2)&#123;</span><br><span class="line">                map[i + j]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i :nums3)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j : nums4)&#123;</span><br><span class="line">                <span class="keyword">if</span>(map.<span class="built_in">find</span>(<span class="number">0</span> - (i + j)) != map.<span class="built_in">end</span>())&#123;</span><br><span class="line">                    ret += map[<span class="number">0</span> - (i + j)];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="383-赎金信"><a href="#383-赎金信" class="headerlink" title="383. 赎金信"></a>383. 赎金信</h2><p>给你两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。<br>如果可以，返回 true ；否则返回 false 。<br>magazine 中的每个字符只能在 ransomNote 中使用一次。</p>
+<img src="/2023/01/02/internship04/leetCode383.jpg" class="" title="这是一张图片">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">canConstruct</span><span class="params">(string ransomNote, string magazine)</span> </span>&#123;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">hashRansomNote</span><span class="params">(<span class="number">26</span>)</span></span>;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">hashMagazine</span><span class="params">(<span class="number">26</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; ransomNote.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            hashRansomNote[ransomNote[i] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; magazine.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            hashMagazine[magazine[i] - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">26</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(hashRansomNote[i] &gt; hashMagazine[i])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="344-反转字符串"><a href="#344-反转字符串" class="headerlink" title="344. 反转字符串"></a>344. 反转字符串</h2><p>编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 s 的形式给出。<br>不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。</p>
+<img src="/2023/01/02/internship04/leetCode344.jpg" class="" title="这是一张图片">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">reverseString</span><span class="params">(vector&lt;<span class="type">char</span>&gt;&amp; s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>,j = s.<span class="built_in">size</span>() - <span class="number">1</span>;j &gt; i;i++,j--)&#123;</span><br><span class="line">            <span class="type">char</span> tmp = s[i];</span><br><span class="line">            s[i] = s[j];</span><br><span class="line">            s[j] = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="541-反转字符串-II"><a href="#541-反转字符串-II" class="headerlink" title="541. 反转字符串 II"></a>541. 反转字符串 II</h2><p>给定一个字符串 s 和一个整数 k，从字符串开头算起，每计数至 2k 个字符，就反转这 2k 字符中的前 k 个字符。<br>如果剩余字符少于 k 个，则将剩余字符全部反转。<br>如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样。</p>
+<img src="/2023/01/02/internship04/leetCode541.jpg" class="" title="这是一张图片">
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">reverseStr</span>(<span class="params"><span class="built_in">string</span> s, <span class="built_in">int</span> k</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">int</span> nums1 = s.size() / (<span class="number">2</span> * k);</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i &lt; nums1;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="built_in">int</span> j = i * <span class="number">2</span> * k,m = k - <span class="number">1</span> + j;j &lt; m;j++,m--)&#123;</span><br><span class="line">                <span class="built_in">char</span> tmp = s[j];</span><br><span class="line">                s[j] = s[m];</span><br><span class="line">                s[m] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">int</span> nums2 = s.size() - nums1 * <span class="number">2</span> * k;</span><br><span class="line">        <span class="keyword">if</span>(nums2 &gt;= k)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="built_in">int</span> i = nums1 * <span class="number">2</span> * k,j = nums1 * <span class="number">2</span> * k + k - <span class="number">1</span>;j &gt; i;i++,j--)&#123;</span><br><span class="line">                <span class="built_in">char</span> tmp = s[i];</span><br><span class="line">                s[i] = s[j];</span><br><span class="line">                s[j] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="built_in">int</span> i = nums1 * <span class="number">2</span> * k,j = s.size() - <span class="number">1</span>;j &gt; i;i++,j--)&#123;</span><br><span class="line">                <span class="built_in">char</span> tmp = s[i];</span><br><span class="line">                s[i] = s[j];</span><br><span class="line">                s[j] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="剑指-Offer-05-替换空格"><a href="#剑指-Offer-05-替换空格" class="headerlink" title="剑指 Offer 05. 替换空格"></a>剑指 Offer 05. 替换空格</h2><p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
+<img src="/2023/01/02/internship04/leetCodeJianZhiOffer05.jpg" class="" title="这是一张图片">
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    string replaceSpace(string s) &#123;</span><br><span class="line">        <span class="keyword">int</span> <span class="keyword">count</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sSize = s.<span class="keyword">size</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; sSize;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                <span class="keyword">count</span>++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        s.resize(sSize + <span class="keyword">count</span> * <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">int</span> leftPoint = sSize - <span class="number">1</span>,rightPoint = s.<span class="keyword">size</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(leftPoint &lt; rightPoint)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[leftPoint] == <span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                s[rightPoint--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">                s[rightPoint--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">                s[rightPoint] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                s[rightPoint] = s[leftPoint];</span><br><span class="line">            &#125;</span><br><span class="line">            rightPoint--;</span><br><span class="line">            <span class="keyword">if</span>(leftPoint != <span class="number">0</span>)&#123;</span><br><span class="line">                leftPoint--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="151-反转字符串中的单词"><a href="#151-反转字符串中的单词" class="headerlink" title="151. 反转字符串中的单词"></a>151. 反转字符串中的单词</h2><p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
+<img src="/2023/01/02/internship04/leetCode151.jpg" class="" title="这是一张图片">
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    void delete<span class="constructor">Space(<span class="params">string</span>&amp; <span class="params">s</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">int</span> slow = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i &lt; s.size<span class="literal">()</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s<span class="literal">[<span class="identifier">i</span>]</span> != <span class="character">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(slow != <span class="number">0</span>)&#123;</span><br><span class="line">                    s<span class="literal">[<span class="identifier">slow</span><span class="operator">++</span>]</span> = <span class="character">&#x27; &#x27;</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">while</span>(i &lt; s.size<span class="literal">()</span>&amp;&amp;s<span class="literal">[<span class="identifier">i</span>]</span> != <span class="character">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                    s<span class="literal">[<span class="identifier">slow</span><span class="operator">++</span>]</span> = s<span class="literal">[<span class="identifier">i</span><span class="operator">++</span>]</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        s.resize(slow);</span><br><span class="line">    &#125;</span><br><span class="line">    void all<span class="constructor">Reserve(<span class="params">string</span>&amp; <span class="params">s</span>,<span class="params">int</span> <span class="params">begin</span>,<span class="params">int</span> <span class="params">end</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="keyword">begin</span>,j = <span class="keyword">end</span>;i &lt; j;i++,j--)&#123;</span><br><span class="line">            <span class="built_in">char</span> temp = s<span class="literal">[<span class="identifier">i</span>]</span>;</span><br><span class="line">            s<span class="literal">[<span class="identifier">i</span>]</span> = s<span class="literal">[<span class="identifier">j</span>]</span>;</span><br><span class="line">            s<span class="literal">[<span class="identifier">j</span>]</span> = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">string</span> reverse<span class="constructor">Words(<span class="params">string</span> <span class="params">s</span>)</span> &#123;</span><br><span class="line">        delete<span class="constructor">Space(<span class="params">s</span>)</span>;</span><br><span class="line">        all<span class="constructor">Reserve(<span class="params">s</span> , 0, <span class="params">s</span>.<span class="params">size</span>()</span> - <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">int</span> fast = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>;i &lt; s.size<span class="literal">()</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">while</span>(s<span class="literal">[<span class="identifier">fast</span>]</span> != <span class="character">&#x27; &#x27;</span>&amp;&amp; fast &lt; s.size<span class="literal">()</span>)&#123;</span><br><span class="line">                fast++;</span><br><span class="line">            &#125;</span><br><span class="line">            all<span class="constructor">Reserve(<span class="params">s</span>, <span class="params">i</span>, <span class="params">fast</span> - 1)</span>;</span><br><span class="line">            i = fast++;</span><br><span class="line">        &#125;</span><br><span class="line">        return s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="研二公司实习"><a href="#研二公司实习" class="headerlink" title="研二公司实习"></a>研二公司实习</h1><h2 id="DH参数与m代码仿真"><a href="#DH参数与m代码仿真" class="headerlink" title="DH参数与m代码仿真"></a>DH参数与m代码仿真</h2><p>双臂运动学是在单臂的基础上建立的，所以前期分析先对单个机械臂进行DH建模。<br>标准DH</p>
+<h3 id="确定每个连杆的固连坐标系"><a href="#确定每个连杆的固连坐标系" class="headerlink" title="确定每个连杆的固连坐标系"></a>确定每个连杆的固连坐标系</h3><img src="/2023/01/02/internship04/DH01.jpg" class="" title="这是一张图片">
+<p>由图已知每个连杆都是以连杆的后一个关节坐标系为固连坐标系。<br>首先建立z轴。在DH中，只需要建立X与Z轴即可。如果是关节是旋转的，z轴位于按右手定则选装的方向，如果关节是滑动的，z轴为沿实现运动的方向。根据这一原则则每个关节的z轴都能直接确定。</p>
+<img src="/2023/01/02/internship04/DH02.jpg" class="" title="这是一张图片">
+<p>然后确定X轴。第一个固连坐标系X轴可以任意确定；其他固连坐标系的X轴需要垂直于在同一固连坐标系的z轴与上一个固连坐标系z轴，比如x1，必须垂直于z0和z1。x4垂直于z3和z4。</p>
+<img src="/2023/01/02/internship04/DH03.jpg" class="" title="这是一张图片">
+<h3 id="自定义一个世界坐标系"><a href="#自定义一个世界坐标系" class="headerlink" title="自定义一个世界坐标系"></a>自定义一个世界坐标系</h3><img src="/2023/01/02/internship04/DH04.jpg" class="" title="这是一张图片">
+<h3 id="确定每个参数"><a href="#确定每个参数" class="headerlink" title="确定每个参数"></a>确定每个参数</h3><p>标准DH先变化X轴然后变化Z轴。变化X轴先旋转角度theata，然后平移d距离；变化z轴先平移a距离，然后旋转α。根据这一思路我们从世界坐标开始推导。<br>Base-0世界坐标到0（属于基座，没有关节变量）<br>变化x：变化x轴的意思是我们要使x轴与x0重合。绕z轴右手定则旋转90°，平移距离暂定为0，。Theata&#x3D;pi&#x2F;2，d&#x3D;0.<br>变化z：变化z轴的意思是我们要使z轴与z0重合。平移距离暂定为0，绕x0轴右手定则旋转90°。 a&#x3D;0，α&#x3D;pi&#x2F;2。<br>0-1<br>变化x0：变化x0轴的意思是我们要使x0轴与x1重合。绕z0轴右手定则旋转90°，平移距离暂定为0，。Theata&#x3D;pi&#x2F;2，关节变量d1初始值为0.<br>变化z0：变化z0轴的意思是我们要使z0轴与z1重合。平移距离暂定为0，绕x1轴右手定则旋转90°。 a&#x3D;0，α&#x3D;pi&#x2F;2。<br>1-2<br>变化x1：绕z1轴右手定则旋转90°，平移距离暂定为0。Theata&#x3D;pi&#x2F;2，关节变量d2初始值为0.<br>变化z1：平移距离暂定为0，绕x2轴右手定则旋转90°。 a&#x3D;0，α&#x3D;pi&#x2F;2。<br>2-3<br>变化x2：绕z2轴右手定则旋转90°，平移距离暂定为0。Theata&#x3D;pi&#x2F;2，关节变量d3初始值为0.<br>变化z2：平移距离暂定为5，绕x3轴右手定则旋转0°。 a&#x3D;5，α&#x3D;0。<br>3-4<br>变化x3：绕z3轴右手定则旋转-90°，平移距离暂定为5。d&#x3D;5，关节变量theata4初始值为-90°。也就是m代码中offset为-pi&#x2F;2。<br>变化z3：平移距离暂定为0，绕x4轴右手定则旋转-90°。 a&#x3D;0，α&#x3D;-pi&#x2F;2。</p>
+<img src="/2023/01/02/internship04/DH05.jpg" class="" title="这是一张图片">
+<p>在matlab俯视图中可以看到建模仿真</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">%%Link函数:创建机械臂对象</span><br><span class="line">%输入参数顺序分别为：关节角、连杆偏距、连杆长度、连杆转角</span><br><span class="line">Lbase=<span class="constructor">Link(&#x27;<span class="params">theta</span>&#x27;,<span class="params">pi</span><span class="operator">/</span>2,&#x27;<span class="params">a</span>&#x27;,0,&#x27;<span class="params">alpha</span>&#x27;,<span class="params">pi</span><span class="operator">/</span>2,&#x27;<span class="params">qlim</span>&#x27;,[5 5],&#x27;<span class="params">standard</span>&#x27;)</span>;%基座不用管</span><br><span class="line">L1=<span class="constructor">Link(&#x27;<span class="params">theta</span>&#x27;,<span class="params">pi</span><span class="operator">/</span>2,&#x27;<span class="params">a</span>&#x27;,0,&#x27;<span class="params">alpha</span>&#x27;,<span class="params">pi</span><span class="operator">/</span>2,&#x27;<span class="params">qlim</span>&#x27;,[0 100],&#x27;<span class="params">offset</span>&#x27;,10,&#x27;<span class="params">standard</span>&#x27;)</span>; </span><br><span class="line">L2=<span class="constructor">Link(&#x27;<span class="params">theta</span>&#x27;,<span class="params">pi</span><span class="operator">/</span>2,&#x27;<span class="params">a</span>&#x27;,0,&#x27;<span class="params">alpha</span>&#x27;,<span class="params">pi</span><span class="operator">/</span>2,&#x27;<span class="params">qlim</span>&#x27;,[0 100],&#x27;<span class="params">offset</span>&#x27;,10,&#x27;<span class="params">standard</span>&#x27;)</span>;</span><br><span class="line">L3=<span class="constructor">Link(&#x27;<span class="params">theta</span>&#x27;,1<span class="operator">/</span>2<span class="operator">*</span><span class="params">pi</span>,&#x27;<span class="params">a</span>&#x27;,5,&#x27;<span class="params">alpha</span>&#x27;,0,&#x27;<span class="params">qlim</span>&#x27;,[0 100],&#x27;<span class="params">offset</span>&#x27;,10,&#x27;<span class="params">standard</span>&#x27;)</span>;</span><br><span class="line">L4=<span class="constructor">Link(&#x27;<span class="params">d</span>&#x27;,5,&#x27;<span class="params">a</span>&#x27;,0,&#x27;<span class="params">alpha</span>&#x27;,-<span class="params">pi</span><span class="operator">/</span>2,&#x27;<span class="params">qlim</span>&#x27;,[-<span class="params">pi</span> <span class="params">pi</span>],&#x27;<span class="params">offset</span>&#x27;,-1<span class="operator">/</span>2<span class="operator">*</span><span class="params">pi</span>,&#x27;<span class="params">standard</span>&#x27;)</span>;</span><br><span class="line">%Ltool=<span class="constructor">Link(&#x27;<span class="params">theta</span>&#x27;,0,&#x27;<span class="params">a</span>&#x27;,0,&#x27;<span class="params">alpha</span>&#x27;,0,&#x27;<span class="params">qlim</span>&#x27;,[10 10],&#x27;<span class="params">standard</span>&#x27;)</span>;</span><br><span class="line">HuaJRobot = <span class="constructor">SerialLink([Lbase,L1,L2,L3,L4],&#x27;<span class="params">name</span>&#x27;,&#x27;HuaJRobot&#x27;)</span>;</span><br><span class="line">Q=<span class="literal">[<span class="number">5</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>]</span>; %<span class="number">2.</span>gif末端点</span><br><span class="line">%绘图</span><br><span class="line">W=<span class="literal">[-<span class="number">40</span> +<span class="number">40</span>  -<span class="number">40</span> +<span class="number">40</span> -<span class="number">40</span> +<span class="number">40</span>]</span>; %工作空间</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">HuaJRobot</span>.</span></span>teach(Q,&#x27;floorlevel&#x27;,-<span class="number">1</span>,&#x27;perspective<span class="character">&#x27;,&#x27;</span>scale&#x27;, <span class="number">0.05</span>,&#x27;noarrow<span class="character">&#x27;,&#x27;</span>workspace&#x27;,W); </span><br></pre></td></tr></table></figure>
+<img src="/2023/01/02/internship04/DH06.jpg" class="" title="这是一张图片">
+<h2 id="进阶版装ROS"><a href="#进阶版装ROS" class="headerlink" title="进阶版装ROS"></a>进阶版装ROS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x ros_install.sh</span><br><span class="line">./ros_install.sh  </span><br></pre></td></tr></table></figure>
+<p>其中ros_install.sh里的内容为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line"></span><br><span class="line">sudo sh -c <span class="string">&#x27;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span></span><br><span class="line"></span><br><span class="line">sudo apt-key adv --keyserver <span class="string">&#x27;hkp://keyserver.ubuntu.com:80&#x27;</span> --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</span><br><span class="line"></span><br><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line">sudo apt install ros-melodic-desktop    -y</span><br><span class="line"></span><br><span class="line">sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential</span><br><span class="line"></span><br><span class="line">wget http://fishros.com/install -O fishros &amp;&amp; . fishros </span><br><span class="line"></span><br><span class="line">rosdepc update</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;source /opt/ros/melodic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>输入3</p>
+<img src="/2023/01/02/internship04/rosInstall.jpg" class="" title="这是一张图片">
+
+<h2 id="刚在虚拟机安装ubuntu系统后需执行的操作"><a href="#刚在虚拟机安装ubuntu系统后需执行的操作" class="headerlink" title="刚在虚拟机安装ubuntu系统后需执行的操作"></a>刚在虚拟机安装ubuntu系统后需执行的操作</h2><p>1.刚映射ios文件时网络连接为主机模式，ubuntu系统安装后需改成桥接模式。<br>2.安装VMware tools</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install <span class="keyword">open</span>-<span class="keyword">vm</span>-tools-desktop</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于Gazebo安装"><a href="#关于Gazebo安装" class="headerlink" title="关于Gazebo安装"></a>关于Gazebo安装</h2><p>环境为Ubuntu18.04，ros版本为melodic<br>先在终端输入</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">gazebo</span></span><br></pre></td></tr></table></figure>
+<p>如果无法运行，则下载gazebo即可</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt <span class="keyword">install</span> gazebo9</span><br><span class="line">sudo apt <span class="keyword">install</span> libgazebo9-dev</span><br></pre></td></tr></table></figure>
+<p>如果运行gazebo出现这样的错误</p>
+<img src="/2023/01/02/internship04/RosGazebo01.jpg" class="" title="这是一张图片">
+<p>解决方法：<br>终端输入</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~<span class="regexp">/.ignition/</span>fuel/config.yaml</span><br></pre></td></tr></table></figure>
+<p>文本编辑</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">将   url : https:<span class="regexp">//</span>api.ignitionfuel.org   用 <span class="comment"># 注释掉</span></span><br><span class="line">添加 url: https:<span class="regexp">//</span>api.ignitionrobotics.org  </span><br></pre></td></tr></table></figure>
+
+<h2 id="ROS中使用gazebo-ros的spawn-model时，显示-spawn-model-4-process-has-died"><a href="#ROS中使用gazebo-ros的spawn-model时，显示-spawn-model-4-process-has-died" class="headerlink" title="ROS中使用gazebo_ros的spawn_model时，显示[spawn_model-4] process has died"></a>ROS中使用gazebo_ros的spawn_model时，显示[spawn_model-4] process has died</h2><p>问题描述：输入rosrun gazebo_ros spawn_model -urdf -model car -param robot_description出现错误</p>
+<img src="/2023/01/02/internship04/RosGazebo02.jpg" class="" title="这是一张图片">
+<p>解决方案：找到上面出现的&#x2F;usr&#x2F;lib&#x2F;python2.7&#x2F;xml&#x2F;etree&#x2F;ElementTree.py文件，用我之前博客的方法，加入以下代码</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">reload</span><span class="params">(sys)</span></span> </span><br><span class="line">sys<span class="selector-class">.setdefaultencoding</span>(<span class="string">&quot;utf-8&quot;</span>)</span><br></pre></td></tr></table></figure>
+<img src="/2023/01/02/internship04/RosGazebo03.jpg" class="" title="这是一张图片">
+<p>即可正常运行</p>
+<img src="/2023/01/02/internship04/RosGazebo04.jpg" class="" title="这是一张图片">
+
+
+
+    </div>
+
+    
+    
+    
+    
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+       
+    </div>
+
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E5%85%AC%E5%8F%B8%E5%AE%9E%E4%B9%A0/" rel="tag"># 公司实习</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/30/internship03/" rel="prev" title="Third Study Record of internship">
+                  <i class="fa fa-chevron-left"></i> Third Study Record of internship
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MErr0r</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"\u003cyour disqus shotname>","count":false,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
